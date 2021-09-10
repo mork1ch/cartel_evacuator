@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Kartel Evacuator</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="/" style="color: #888888">Главная</a></li>
+            <li><a href="#about_us">Почему мы?</a></li>
+            <li><a href="#cost">Стоимость</a></li>
+            <li><a href="#galerey_photo">Галерея</a></li>
+            <li><a href="#Reviews">Отзывы</a></li>
+            <li><a href="#Contacts">Контакты</a></li>
+        </ul>
+    </header>
+    
+    <div id="Callback">
+        <div class="info">
+            <div class="img" onclick="Close_Order_a_callback()"></div>
+            <div class="clearfix"></div>
+            <h2>Укажите пожалуйста ваш номер, <span style="display: block;">с вами свяжуться в течении 10 минут</span></h2>
+            <p style="display: inline-block;">+7</p><input type="text" placeholder="Оставьте свой телефон ">
+            <button>Перезвоните мне</button>
+        </div>
+        <div class="closeCallback" onclick="Close_Order_a_callback()"></div>
+    </div>
+
+
+    <div class="title">
+        <div class="content">
+            <div class="top">
+                <div class="logotype">
+                    <div class="left">
+                        <div class="img"></div>
+                        <div class="name">
+                            <div class="logo_name">Kartel Evacuator</div>
+                            <p>срочная эвакуация</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="right">
+                        <div class="inf geo">
+                            <div class="image">
+                                <div class="img"></div>
+                            </div>
+                            <div class="info">
+                                <p>г. Санкт-Петербург,</p>
+                                <p>ул. Ленина, д. 25</p>
+                            </div>
+                        </div>
+                        <div class="inf time">
+                            <div class="image">
+                                <div class="img"></div>
+                            </div>
+                            <div class="info">
+                                <p>Часы работы:</p>
+                                <p>Круглосуточно</p>
+                            </div>
+                        </div>
+                        <div class="inf telephone">
+                            <div class="image">
+                                <div class="img"></div>
+                            </div>
+                            <div class="info">
+                                <p>+7(800)123-45-21</p>
+                                <p style="color: #E0391E;">обратный звонок</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="urgent_form">
+                <div class="left">
+                    <div class="information">
+                        <h1>Вызов эвакуатора в Санкт-Петербурге и Ленинградской области</h1>
+                        <p>Срочная подача эвакуатора по Санкт-Петербургу и Ленинградской области от 2000 рублей. Для заказа вы можете заказать обратный звонок или запонить форму заявки.</p>
+                        <button onclick="Open_Order_a_callback()">Заказать обратный звонок </button>
+                        <div class="soc">
+                            <p>Наши социальные сети:</p>
+                            <div class="links">
+                                <a href="" class="insta"></a>
+                                <a href="" class="vk"></a>
+                                <a href="" class="tik-toc"></a>
+                                <a href="" class="you-tube"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="form">
+                        <h2>Форма срочного вызова</h2>
+                        <div class="Field">
+                            <p>Номер вашего телефона:</p>
+                            <div class="img tel"></div>
+                            <input type="text" placeholder="(800)123-45-21" maxlength="10">
+                            <p class="number7">+7</p>
+                        </div>
+                        <div class="Field">
+                            <p>Где вы сейчас находитесь:</p>
+                            <div class="img geo"></div>
+                            <input type="text" placeholder="г. Санкт-Петербург...  ">
+                        </div>
+                        <div class="Field">
+                            <p>Выберете тип автомобиля:</p>
+                            <div class="open_menu">
+                                <div class="img triangle" id="triangle" onclick="open_type_auto()" style="transform: rotate(0deg);"></div>
+                                <div class="menu_auto" id="menu_auto">
+                                    <input type="text" id="input_type_auto" value="Легковой" disabled>
+                                    <div class="hidden_menu_auto" id="hidden_menu_auto">
+                                        <p onclick="type(type_car = 'Легковой')">       Легковой</p>
+                                        <p onclick="type(type_car = 'Паркетник')">      Паркетник</p>
+                                        <p onclick="type(type_car = 'Внедорожник')">    Внедорожник</p>
+                                        <p onclick="type(type_car = 'Комерческий')">    Комерческий</p>
+                                        <p onclick="type(type_car = 'Эксклюзивное')">   Эксклюзивное</p>
+                                        <p onclick="type(type_car = 'Спец. техника')">  Спец. техника</p>
+                                        <p onclick="type(type_car = 'С манипулятором')">С манипулятором</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Field">
+                            <p>Дополнительные условия:</p>
+                            <div class="checkboxses">
+                                <input type="checkbox" class="custom-checkbox" id="wheels_are_blocked" value="wheels_are_blocked">
+                                <label for="wheels_are_blocked">Заблокированы колеса</label>
+
+                                <input type="checkbox" class="custom-checkbox" id="steering_wheel_is_locked" value="steering_wheel_is_locked">
+                                <label for="steering_wheel_is_locked">Заблокирован руль</label>
+                            </div>
+                        </div>
+                        <button>Вызвать эвакуатор</button>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="about_us" id="about_us">
+            <div class="left">
+                <div>
+                    <h2><span class="big_papa">П</span>очему вам стоит выбрать именно нас ?</h2>
+                    <p>Наша компания находится на рынке автоэвакуации уже более 10 лет, что позволило накопить огромное количество опыта, мастерства и довольных клиентов.</p>
+                    <a href="">Перейти к отзывам</a>
+                </div>
+                <div>
+                    <h3>Пример реальной эвакуации:</h3>
+                    <p>Так же предлагаем посмотреть видео-ролик о том, как происходит эвакуация на реально примере</p>
+                    <iframe width="480px" height="270px" src="https://www.youtube.com/embed/CnytwOFW_lo"></iframe>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <div class="left"><div class="img" style="background-image: url(/img/clock.png);"></div></div>
+                    <div class="right">
+                        <div>
+                            <h3>У нас самое пунктуальное время подачи</h3>
+                            <p>Расчёт точного время подачи возможно благодаря высокоточной навигационной системой Глонасс</p>
+                            <a href="">Читать далее</a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div>
+                    <div class="left">
+                        <h3>Наш сервис работает круглосуточно</h3>
+                        <p>Мы принимаем заявки, отвечаем на звонки и выезжаем на вызовы 24/7, без выходных</p>
+                        <a href="">Читать далее</a>
+                    </div>
+                    <div class="right"><div class="img"  style="background-image: url(/img/27_7.png);"></div></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div>
+                    <div class="left"><div class="img"  style="background-image: url(/img/car.png);"></div></div>
+                    <div class="right">
+                        <h3>У нас свой собственный автопарк</h3>
+                        <p>Мы предоставляем эвакуаторы из собственного парка.</p>
+                        <a href="">Читать далее</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        
+        <div class="cost" id="cost">
+            <h2><span class="big_papa">У</span>слуги эвакуатора по доступным ценам</h2>
+            <p>Наши цены - это показатель чуть ниже среднего на рынке, но при такой</p>
+            <p> цене вы получается отличное качество услуг. Цены на услуги не меняются уже очень давно,</p>
+            <p>так как это идеальный баланс, который устраивает любого пользователя.</p>
+        
+            <div class="cost_images">
+                <div>
+                    <div class="img">
+                        <div class="shadow">
+                            <div class="left">
+                                <p>Эвакуация</p>
+                                <p>легкового</p>
+                                <p>автомобиля</p>
+                                <p>от 2000₽</p>
+                            </div>
+                            <div class="right">
+                                <p>50₽</p>
+                                <p>за км</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="razdel"></span>
+                    <div class="img">
+                        <div class="shadow">
+                            <div class="left">
+                                <p>Эвакуация</p>
+                                <p>паркетника</p>
+                                <p>от 2200₽ </p>
+                            </div>
+                            <div class="right">
+                                <p>60₽</p>
+                                <p>за км</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="razdel"></span>
+                    <div class="img">
+                        <div class="shadow">
+                            <div class="left">
+                                <p>Эвакуация</p>
+                                <p>внедорожника</p>
+                                <p>от 3000₽</p>
+                            </div>
+                            <div class="right">
+                                <p>70₽</p>
+                                <p>за км</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="img">
+                        <div class="shadow">
+                            <div class="left">
+                                <p>Эвакуация</p>
+                                <p>комерческого</p>
+                                <p>автомобиля</p>
+                                <p>от 3000₽ </p>
+                            </div>
+                            <div class="right">
+                                <p>90₽</p>
+                                <p>за км</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="razdel"></span>
+                    <div class="img">
+                        <div class="shadow">
+                            <div class="left">
+                                <p>Эвакуация</p>
+                                <p>эксклюзивного</p>
+                                <p>автомобиля</p>
+                                <p>от 3000₽</p>
+                            </div>
+                            <div class="right">
+                                <p>100₽</p>
+                                <p>за км</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="razdel"></span>
+                    <div class="img">
+                        <div class="shadow">
+                            <div class="left">
+                                <p>Эвакуация</p>
+                                <p>спецтехники</p>
+                                <p>до 3,5 тон</p>
+                                <p>от 3500₽</p>
+                            </div>
+                            <div class="right">
+                                <p>100₽</p>
+                                <p>за км</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="img">
+                        <div class="shadow">
+                            <div class="left">
+                                <p>Стоимость Манипулятора</p>
+                                <p>расчитывается индивидуально</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="razdel"></span>
+                    <div>
+                        <h2>Если вы не знаете, как определить тип вашего транспорта, то наш оператор поможет вам</h2>
+                        <p>Для связи с ним, вы можете позвонить нам по номеру <span style="color: #E0391E">+7(800)123-45-21 </span> или отправить заявку и с вами свяжутся в течении 10 минут</p>
+                        <button onclick="Open_Order_a_callback()">Заказать обратный звонок</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="galerey" id="galerey_photo">
+            <h2><span class="big_papa">Ф</span>ото галерея</h2>
+            <p>Чтобы развеять все ваши сомнения, мы хотим показать вам главный инструмент -  наши эвакуаторы. В зависимости от вашего автомобиля на вызов приедет соответствующий транспорт, мы подберём оптимальный по габаритам и грузоподъёмности эвакуатор.</p>
+            <div class="images">
+
+                <button id="galerey_left" onclick="galerey(img = img - 1,perelist = 0)">
+                    <div class="img" id="galerey_left_img_bg">
+                        <div class="owerflow"><img id="left_img_zapolnenye" src="img/galerey_images/galerey_images_1.png"></div>
+                    </div>
+                </button>
+                
+                <img id="galerey_img_center" src="img/galerey_images/galerey_images_2.png">
+
+                <button id="galerey_right" onclick="galerey(img = img + 1,perelist = 1)">
+                    <div class="img" id="galerey_right_img_bg">
+                        <div class="overflow"><img id="right_img_zapolnenye" src="img/galerey_images/galerey_images_3.png"></div>
+                    </div>
+                </button>
+
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="Reviews" id="Reviews">
+            <div class="content">
+                <h2><span class="big_papa">О</span>тзывы</h2>
+                <div class="comments_galerey">
+                    <div class="galerey_comments" id="galerey_comments">
+
+                        <div id="comment_block">
+                            <div class="left">
+                                <div class="img"></div>
+                            </div>
+                            <div class="right">
+                                <p id="comment">““Отличный сервис
+                                    и сотрудники, порадовал проффесионализм
+                                    и вежливость.””</p>
+                                <p id="author">-Алексей</p>
+                            </div>
+                        </div>
+    
+                        <div id="comment_block">
+                            <div class="left">
+                                <div class="img"></div>
+                            </div>
+                            <div class="right">
+                                <p id="comment">“Приехали и правда точно во время”</p>
+                                <p id="author">-Максим</p>
+                            </div>
+                        </div>
+                        
+                        <div id="comment_block">
+                            <div class="left">
+                                <div class="img"></div>
+                            </div>
+                            <div class="right">
+                                <p id="comment">“Всё сделали очень круто и быстро, спасибо”</p>
+                                <p id="author">-Татьяна</p>
+                            </div>
+                        </div>
+                        
+                        <div id="comment_block">
+                            <div class="left">
+                                <div class="img"></div>
+                            </div>
+                            <div class="right">
+                                <p id="comment">“Приехали и правда точно во время”</p>
+                                <p id="author">-Максим</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button id="left_arr" onclick="scroll_galerey_comments(perelist = 0)"></button>
+                        <button id="right_arr" onclick="scroll_galerey_comments(perelist = 1)"></button>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button>Оставить отзыв</button> 
+                    <button>Вызвать эвакуатор</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="Contacts" id="Contacts">
+            <div class="left">
+                <h2><span class="big_papa">К</span>онтакты</h2>
+                <p>Связаться с нами очень просто, вы можете заполнить форму, позвонить нам или заказать обратный звонок</p>
+                <p>+7(800)123-45-2</p>
+                <p>ИП “Лучший эвакуатор в мире”</p>
+                <p>г. Санкт-Петербург, ул. Садовая, дом 24, офис 4</p>
+                <div class="soc">
+                    <p>Наши социальные сети:</p>
+                    <div class="links">
+                        <a href="" class="insta"></a>
+                        <a href="" class="vk"></a>
+                        <a href="" class="tik-toc"></a>
+                        <a href="" class="you-tube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="form">
+                    <h2>Форма срочного вызова</h2>
+                    <div class="Field">
+                        <p>Номер вашего телефона:</p>
+                        <div class="img tel"></div>
+                        <input type="text" placeholder="(800)123-45-21" maxlength="10">
+                        <p class="number7">+7</p>
+                    </div>
+                    <div class="Field">
+                        <p>Где вы сейчас находитесь:</p>
+                        <div class="img geo"></div>
+                        <input type="text" placeholder="г. Санкт-Петербург...  ">
+                    </div>
+                    <div class="Field">
+                        <p>Выберете тип автомобиля:</p>
+                        <div class="open_menu">
+                            <div class="img triangle" id="triangle_bottom" onclick="open_type_auto_bottom()" style="transform: rotate(0deg);"></div>
+                            <div class="menu_auto" id="menu_auto_bottom">
+                                <input type="text" id="input_type_auto_bottom" value="Легковой" disabled>
+                                <div class="hidden_menu_auto" id="hidden_menu_auto_bottom">
+                                    <p onclick="type_bottom(type_car = 'Легковой')">       Легковой</p>
+                                    <p onclick="type_bottom(type_car = 'Паркетник')">      Паркетник</p>
+                                    <p onclick="type_bottom(type_car = 'Внедорожник')">    Внедорожник</p>
+                                    <p onclick="type_bottom(type_car = 'Комерческий')">    Комерческий</p>
+                                    <p onclick="type_bottom(type_car = 'Эксклюзивное')">   Эксклюзивное</p>
+                                    <p onclick="type_bottom(type_car = 'Спец. техника')">  Спец. техника</p>
+                                    <p onclick="type_bottom(type_car = 'С манипулятором')">С манипулятором</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Field">
+                        <p>Дополнительные условия:</p>
+                        <div class="checkboxses">
+                            <input type="checkbox" class="custom-checkbox" id="wheels_are_blocked_bottom" value="wheels_are_blocked">
+                            <label for="wheels_are_blocked_bottom">Заблокированы колеса</label>
+
+                            <input type="checkbox" class="custom-checkbox" id="steering_wheel_is_locked_bottom" value="steering_wheel_is_locked">
+                            <label for="steering_wheel_is_locked_bottom">Заблокирован руль</label>
+                        </div>
+                    </div>
+                    <button>Вызвать эвакуатор</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="clearfix"></div>
+    </div>
+    <footer>
+        <div class="content">
+            <div class="left">
+                <div class="logotype">
+                    <div class="img"></div>
+                    <div class="name">
+                        <div class="logo_name">Kartel Evacuator</div>
+                        <p>срочная эвакуация</p>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="#about_us">Почему мы?</a></li>
+                        <li><a href="#cost">Стоимость</a></li>
+                        <li><a href="#galerey_photo">Галерея</a></li>
+                        <li><a href="#Reviews">Отзывы</a></li>
+                        <li><a href="#Contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="approve"><p>© ”Картель эвакуатор” 2021</p></div>
+            </div>
+            <div class="right">
+                <div class="number">
+                    <p>+7(800)123-45-2</p>
+                </div>
+
+                <p>ИП “Лучший эвакуатор в мире”</p>
+                <p>г. Санкт-Петербург, ул. Садовая, дом 24, офис 4</p>
+
+                <div class="politics">
+                    <a href="">Политика конфиденциальности</a>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="created_by_toda">
+                <p>Разработано студией <span style="color: #E0391E;">TODA</span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
