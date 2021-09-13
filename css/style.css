@@ -46,8 +46,9 @@ h3{
     font-weight: bold;
     color: #E0391E;
 }
+
 /* for scripts alerts */
-#Callback{
+.alert{
     font-family: 'Montserrat';
     width: 100%;
     height: 100vh;
@@ -59,7 +60,7 @@ h3{
     opacity: 0;
     transition: 0.5s all ease;
 }
-#Callback .info{
+.alert .info{
     width: 587px;
     height: 184px;
     
@@ -70,7 +71,7 @@ h3{
     z-index: 11;
     border-radius: 6px;
 }
-#Callback .info .img{
+.alert .info .img{
     width: 16px;
     height: 16px;
     
@@ -86,14 +87,14 @@ h3{
 
     cursor: pointer;
 }
-#Callback .info h2{
+.alert .info h2{
     font-family: 'Corbel';
     font-weight: 700;
     font-size: 30px;
     color: #041226;
     margin-bottom: 20px;
 }
-#Callback .info input{
+.alert .info input{
     font-family: 'Montserrat';
     font-weight: 400;
 
@@ -107,7 +108,7 @@ h3{
 
     margin-bottom: 40px;
 }
-#Callback .info button{
+.alert .info button{
     display: block;
     color: #fff;
     background-color: #E0391E;
@@ -115,14 +116,91 @@ h3{
     border: none;
     padding: 6px 60px;
 }
-
-#Callback .closeCallback{
+.alert .closeCallback{
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.800);
     position: fixed;
     display: flex;
 }
+
+#Reviews_form .info{
+    width: 604px;
+    height: 469px;
+}
+#Reviews_form .info h2{
+    width: 467px;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+#Reviews_form .info .num{
+    float: left;
+    position: relative;
+    top: 9px;
+    left: 10px;
+    z-index: 2;
+    font-size: 15px;
+    color: rgba(4, 18, 38, 0.4);
+    display: none;
+}
+#Reviews_form .info input{
+    width: 336px;
+    padding-left: 30px;
+    display: block;
+    position: relative;
+    margin-left: 0;
+    font-size: 15px;
+    margin-bottom: 15px;
+    background: #FFFFFF;
+    color: rgba(4, 18, 38, 0.4);
+    box-shadow: inset 0px 2px 64px rgba(0, 0, 0, 0.03);
+}
+#Reviews_form .info input:focus{
+    border: 2px solid #000;
+}
+
+#Reviews_form .info #Reviews_form_input{
+    z-index: 1;
+    left: 0;
+}
+#Reviews_form .info #textarea{
+    padding: 10px 10px 10px 30px;
+    width: 336px;
+    min-height: 127px;
+    font-size: 15px;
+    border: 0;
+    box-shadow: inset 0px 2px 64px rgba(0, 0, 0, 0.03);
+    resize: none;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat';
+}
+#the_order_has_been_sent .info{
+    height: 310px;
+    padding: 50px;
+}
+#the_order_has_been_sent .info h2{
+    width: 467px;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+#the_order_has_been_sent .info .thx{
+    margin-bottom: 50px;
+}
+#the_order_has_been_sent .info .thx p:first-child{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+#the_order_has_been_sent .info .thx p:last-child{
+    font-size: 15px;
+}
+#the_order_has_been_sent .info .tel{
+    color: #E0391E;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
 /* end */
 
 
@@ -384,7 +462,7 @@ header ul li:last-child{
     position: relative;
     float: left;
     margin-bottom: 0;
-    top: -28px;
+    top: 29px;
     left: 66px;
 }
 .content .form .geo{
@@ -523,7 +601,9 @@ background-color: #e9ecef;
     padding-left: 87px;
     width: 239px;
 }
-
+.Contacts .right .form .Field .number7{
+    color: #04122666;
+}
 .content .about_us{
     width: 100%;
     display: table;
@@ -937,11 +1017,15 @@ background-color: #e9ecef;
     float: right;
     right: -25px;
 }
-.Reviews .content>.buttons{
-    text-align: center;
-    font-size: 0;
+.Reviews .content .width_buttons{
+    width: 100%;
 }
-.Reviews .content>.buttons button{
+.Reviews .content .width_buttons>.buttons{
+    font-size: 0;
+    width: 517px;
+    margin: 0 auto;
+}
+.Reviews .content .width_buttons>.buttons button{
     border: none; 
     background-color: #E0391E;
     padding: 6px 68px;
@@ -950,7 +1034,7 @@ background-color: #e9ecef;
     color: #fff;
     border-radius: 6px;
 }
-.Reviews .content>.buttons button:last-child{
+.Reviews .content .width_buttons>.buttons button:last-child{
     margin-right: 0;
 }
 
@@ -1001,12 +1085,20 @@ background-color: #e9ecef;
 .Contacts .left .soc .links a:last-child{
     margin-right: 0;
 }
-
+.Contacts .left button{
+    background-color: #E0391E;
+    border: none;
+    color: #fff;
+    width: 280px;
+    padding: 6px 0;
+    border-radius: 6px;
+    font-size: 20px;
+    margin-top: 30px;
+}
 .Contacts .right{
     float: right;
     text-align: center;
 }
-
 
 /* footer */
 
@@ -1102,4 +1194,240 @@ footer .content .right .politics a{
 }
 footer .content .created_by_toda{
     text-align: center;
+}
+
+@media screen and (max-width: 1250px){
+    header{
+        width: 980px;
+        margin-left: -490px;
+    } 
+    .content{
+        width: 980px;
+    }
+    .title .content .top .logotype .img{
+        width: 68px;
+        height: 76px;
+    }
+    .title .content .top .links .right .inf:nth-child(1){
+        display: none;
+    }
+    .title .content .urgent_form .left h1{
+        width: 460px;
+        font-size: 25px;
+    }
+    .title .content .urgent_form .left p{
+        width: 443px;
+        font-size: 15px;
+    }
+    .content .right .form{
+        padding: 0 50px;
+    }
+    .content .about_us .left{
+        width: 497px;
+    }
+    .content .about_us .left>div h2{
+        width: 342px;
+    }
+    .content .about_us .left>div p{
+        width: 394px;
+        font-size: 15px;
+    }
+    .content .about_us .left>div:nth-child(2) p{
+        width: 415px;
+        font-size: 15px;
+    }
+    .content .about_us .left iframe{
+        width: 359px;
+        height: 226px ;
+    }
+    .content .about_us .right>div:nth-child(2n+1) .left{
+        width: 156px;
+        height: 128px;
+    }
+    .content .about_us .right>div:nth-child(2n+1) .right{
+        width: 327px;
+        margin-left: 50px;
+    }
+    .content .about_us .right>div:nth-child(2n+2) .left{
+        width: 327px;
+        margin-right: 50px;
+    }
+    .content .about_us .right>div:nth-child(2n+2) .right{
+        width: 156px;
+        height: 128px;
+    }
+    .content .about_us .right>div p{
+        font-size: 15px;
+    } 
+    .content .cost h2{
+        margin-bottom: 30px;
+    }
+    .content .cost .cost_images>div .img{
+        background-size: auto 100%;
+    }
+    .content .cost .cost_images>div:nth-child(3) .img:nth-child(1){
+        width: 420px;
+    }
+    .content .galerey .images button{
+        width: 238px;
+        height: 170px;
+    }
+    .content .galerey .images #galerey_img_center{
+        width: 446px;
+        height: 308px;
+    }
+    .content .galerey .images button .img #left_img_zapolnenye{
+        width: 446px;
+        height: 308px;
+        top: -69px;
+    }
+    .content .galerey .images button .img #right_img_zapolnenye{
+        width: 446px;
+        height: 308px;
+        top: 31px;
+    }
+    .Reviews{
+        margin-top: 100px;
+        margin-bottom: 105px;
+    }
+    .Reviews .content .comments_galerey .galerey_comments>div{
+        width: 313px;
+        height: 192px;
+    }
+    .Reviews .content .comments_galerey .galerey_comments>div .left .img{
+        width: 51px;
+        height: 51px;
+    }
+    .Reviews .content .comments_galerey .galerey_comments>div .right{
+        width: 202px;
+        margin: 24px 22px 0 0;
+    }
+    .Reviews .content .comments_galerey .galerey_comments>div .right #comment{
+        margin-bottom: 10px;
+    }
+    .Reviews .content .comments_galerey .buttons button{
+        top: -125px;
+    }
+    .Contacts .left p{
+        width: 430px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    header{
+        width: 824px;
+        margin-left: -490px;
+    } 
+    .content{
+        width: 980px;
+    }
+    .title .content .top .logotype .img{
+        width: 68px;
+        height: 76px;
+    }
+    .title .content .top .links .right .inf:nth-child(1){
+        display: none;
+    }
+    .title .content .urgent_form .left h1{
+        width: 460px;
+        font-size: 25px;
+    }
+    .title .content .urgent_form .left p{
+        width: 443px;
+        font-size: 15px;
+    }
+    .content .right .form{
+        padding: 0 50px;
+    }
+    .content .about_us .left{
+        width: 497px;
+    }
+    .content .about_us .left>div h2{
+        width: 342px;
+    }
+    .content .about_us .left>div p{
+        width: 394px;
+        font-size: 15px;
+    }
+    .content .about_us .left>div:nth-child(2) p{
+        width: 415px;
+        font-size: 15px;
+    }
+    .content .about_us .left iframe{
+        width: 359px;
+        height: 226px ;
+    }
+    .content .about_us .right>div:nth-child(2n+1) .left{
+        width: 156px;
+        height: 128px;
+    }
+    .content .about_us .right>div:nth-child(2n+1) .right{
+        width: 327px;
+        margin-left: 50px;
+    }
+    .content .about_us .right>div:nth-child(2n+2) .left{
+        width: 327px;
+        margin-right: 50px;
+    }
+    .content .about_us .right>div:nth-child(2n+2) .right{
+        width: 156px;
+        height: 128px;
+    }
+    .content .about_us .right>div p{
+        font-size: 15px;
+    } 
+    .content .cost h2{
+        margin-bottom: 30px;
+    }
+    .content .cost .cost_images>div .img{
+        background-size: auto 100%;
+    }
+    .content .cost .cost_images>div:nth-child(3) .img:nth-child(1){
+        width: 420px;
+    }
+    .content .galerey .images button{
+        width: 238px;
+        height: 170px;
+    }
+    .content .galerey .images #galerey_img_center{
+        width: 446px;
+        height: 308px;
+    }
+    .content .galerey .images button .img #left_img_zapolnenye{
+        width: 446px;
+        height: 308px;
+        top: -69px;
+    }
+    .content .galerey .images button .img #right_img_zapolnenye{
+        width: 446px;
+        height: 308px;
+        top: 31px;
+    }
+    .Reviews{
+        margin-top: 100px;
+        margin-bottom: 105px;
+    }
+    .Reviews .content .comments_galerey .galerey_comments>div{
+        width: 313px;
+        height: 192px;
+    }
+    .Reviews .content .comments_galerey .galerey_comments>div .left .img{
+        width: 51px;
+        height: 51px;
+    }
+    .Reviews .content .comments_galerey .galerey_comments>div .right{
+        width: 202px;
+        margin: 24px 22px 0 0;
+    }
+    .Reviews .content .comments_galerey .galerey_comments>div .right #comment{
+        margin-bottom: 10px;
+    }
+    .Reviews .content .comments_galerey .buttons button{
+        top: -125px;
+    }
+    .Contacts .left p{
+        width: 430px;
+        font-size: 15px;
+    }
 }

@@ -20,15 +20,44 @@
         </ul>
     </header>
     
-    <div id="Callback">
+    <div class="alert" id="Callback">
         <div class="info">
-            <div class="img" onclick="Close_Order_a_callback()"></div>
+            <div class="img" onclick="Close_avt(id_avt = 'Callback')"></div>
             <div class="clearfix"></div>
             <h2>Укажите пожалуйста ваш номер, <span style="display: block;">с вами свяжуться в течении 10 минут</span></h2>
-            <p style="display: inline-block;">+7</p><input type="text" placeholder="Оставьте свой телефон ">
-            <button>Перезвоните мне</button>
+            <p style="display: inline-block;">+7</p><input type="text" placeholder="Оставьте свой телефон" maxlength="10">
+            <button onclick="Open_avt(id_avt = 'the_order_has_been_sent')">Перезвоните мне</button>
         </div>
-        <div class="closeCallback" onclick="Close_Order_a_callback()"></div>
+        <div class="closeCallback" onclick="Close_avt(id_avt = 'Callback')"></div>
+    </div>
+
+    <div class="alert" id="Reviews_form">
+        <div class="info">
+            <div class="img" onclick="Close_avt(id_avt = 'Reviews_form')"></div>
+            <div class="clearfix"></div>
+            <h2>Спасибо, что решили оставить отзыв, это важно для нас</h2>
+            <p class="num" id="Reviews_form_p">+7</p>
+            <input type="text" id="Reviews_form_input" placeholder="Оставьте свой телефон" maxlength="10" onclick="show_id(id_p = 'Reviews_form_p' ,id_input = 'Reviews_form_input' ,id_color = '#000' ,id_left = '-17px')">
+            <input type="text" placeholder="Введите ваше имя">
+            <textarea name="" id="textarea" placeholder="Напишите ваш комментарий" ></textarea>
+            <button onclick="Close_avt(id_avt = 'Reviews_form')">Отправить отзыв</button>
+        </div>
+        <div class="closeCallback" onclick="Close_avt(id_avt = 'Reviews_form')"></div>
+    </div>
+
+    <div class="alert" id="the_order_has_been_sent">
+        <div class="info">
+            <div class="img" onclick="Close_avt(id_avt = 'the_order_has_been_sent')"></div>
+            <div class="clearfix"></div>
+            <h2>Ваш заказ принят, скоро с вами свяжуться для уточнения вызова</h2>
+            <div class="thx">
+                <p>Спасибо, что выбрали Kartel Evacuator</p>
+                <p>Обычно обратный звонок поступает в течении 10 минут.</p>
+            </div>
+            <p class="tel">+7(800)123-45-2</p>
+            <p>Позвоните если этого не произошло</p>
+        </div>
+        <div class="closeCallback" onclick="Close_avt(id_avt = 'the_order_has_been_sent')"></div>
     </div>
 
 
@@ -83,7 +112,7 @@
                     <div class="information">
                         <h1>Вызов эвакуатора в Санкт-Петербурге и Ленинградской области</h1>
                         <p>Срочная подача эвакуатора по Санкт-Петербургу и Ленинградской области от 2000 рублей. Для заказа вы можете заказать обратный звонок или запонить форму заявки.</p>
-                        <button onclick="Open_Order_a_callback()">Заказать обратный звонок </button>
+                        <button onclick="Open_avt(id_avt = 'Callback')">Заказать обратный звонок </button>
                         <div class="soc">
                             <p>Наши социальные сети:</p>
                             <div class="links">
@@ -101,8 +130,8 @@
                         <div class="Field">
                             <p>Номер вашего телефона:</p>
                             <div class="img tel"></div>
-                            <input type="text" placeholder="(800)123-45-21" maxlength="10">
-                            <p class="number7">+7</p>
+                            <p class="number7" id="urgent_form_p">+7</p>
+                            <input type="text" id="urgent_form_input" placeholder="(800)123-45-21" maxlength="10" onclick="show_id(id_p = 'urgent_form_p' ,id_input = 'urgent_form_input' ,id_color = '#fff' ,id_left = '66px')">
                         </div>
                         <div class="Field">
                             <p>Где вы сейчас находитесь:</p>
@@ -137,7 +166,7 @@
                                 <label for="steering_wheel_is_locked">Заблокирован руль</label>
                             </div>
                         </div>
-                        <button>Вызвать эвакуатор</button>
+                        <button onclick="Open_avt(id_avt = 'the_order_has_been_sent')">Вызвать эвакуатор</button>
                     </div>
                 </div>
             </div>
@@ -151,7 +180,7 @@
                 <div>
                     <h2><span class="big_papa">П</span>очему вам стоит выбрать именно нас ?</h2>
                     <p>Наша компания находится на рынке автоэвакуации уже более 10 лет, что позволило накопить огромное количество опыта, мастерства и довольных клиентов.</p>
-                    <a href="">Перейти к отзывам</a>
+                    <a href="#Reviews">Перейти к отзывам</a>
                 </div>
                 <div>
                     <h3>Пример реальной эвакуации:</h3>
@@ -305,7 +334,7 @@
                     <div>
                         <h2>Если вы не знаете, как определить тип вашего транспорта, то наш оператор поможет вам</h2>
                         <p>Для связи с ним, вы можете позвонить нам по номеру <span style="color: #E0391E">+7(800)123-45-21 </span> или отправить заявку и с вами свяжутся в течении 10 минут</p>
-                        <button onclick="Open_Order_a_callback()">Заказать обратный звонок</button>
+                        <button onclick="Open_avt(id_avt = 'Callback')">Заказать обратный звонок</button>
                     </div>
                 </div>
             </div>
@@ -348,9 +377,7 @@
                                 <div class="img"></div>
                             </div>
                             <div class="right">
-                                <p id="comment">““Отличный сервис
-                                    и сотрудники, порадовал проффесионализм
-                                    и вежливость.””</p>
+                                <p id="comment">“Отличный сервис и сотрудники, порадовал проффесионализм и вежливость.”</p>
                                 <p id="author">-Алексей</p>
                             </div>
                         </div>
@@ -390,9 +417,11 @@
                         <button id="right_arr" onclick="scroll_galerey_comments(perelist = 1)"></button>
                     </div>
                 </div>
-                <div class="buttons">
-                    <button>Оставить отзыв</button> 
-                    <button>Вызвать эвакуатор</button>
+                <div class="width_buttons">
+                    <div class="buttons">
+                        <button onclick="Open_avt(id_avt = 'Reviews_form')">Оставить отзыв</button> 
+                        <button onclick="Open_avt(id_avt = 'Callback')">Вызвать эвакуатор</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -415,6 +444,7 @@
                         <a href="" class="you-tube"></a>
                     </div>
                 </div>
+                <button>Перезвоните мне</button>
             </div>
             <div class="right">
                 <div class="form">
@@ -422,8 +452,8 @@
                     <div class="Field">
                         <p>Номер вашего телефона:</p>
                         <div class="img tel"></div>
-                        <input type="text" placeholder="(800)123-45-21" maxlength="10">
-                        <p class="number7">+7</p>
+                        <p class="number7" id="Contacts_form_p">+7</p>
+                        <input type="text" id="Contacts_form_input" placeholder="(800)123-45-21" maxlength="10" onclick="show_id(id_p = 'Contacts_form_p' ,id_input = 'Contacts_form_input' ,id_color = '#000' ,id_left = '66px')">
                     </div>
                     <div class="Field">
                         <p>Где вы сейчас находитесь:</p>
@@ -458,7 +488,7 @@
                             <label for="steering_wheel_is_locked_bottom">Заблокирован руль</label>
                         </div>
                     </div>
-                    <button>Вызвать эвакуатор</button>
+                    <button onclick="Open_avt(id_avt = 'the_order_has_been_sent')">Вызвать эвакуатор</button>
                 </div>
             </div>
         </div>

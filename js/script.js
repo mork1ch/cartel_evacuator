@@ -1,6 +1,14 @@
 'use strict'
-//Для показа в форме, автомобиля, который выбрал пользователь
-var type_car;
+
+var windowOuterWidth; //Для получения ширины экрана
+var type_car;   // Для показа в форме, автомобиля, который выбрал пользователь
+var id_p;       // Для того чтобы получить id "+7" в input с номером
+var id_input;   // Для того чтобы получить id "+7" в input с номером
+var id_color;   // Для того чтобы получить id "+7" в input с номером
+var id_left;    // Для того чтобы получить id "+7" в input с номером
+var id_avt;     // Для открытия avt
+var id_close_avt;     // Для открытия avt
+
 //Для галереи фотографий
 var img = 2;            //Начальное изображение
 var galerey_left;
@@ -10,8 +18,20 @@ var max_img_galer = 7;  //Количество всех изображений
 var perelist = 0;   //Для подсчета перелистывания right or left, с помощью булевого значения
                     //Используется в галереи фотографий и комментариев
 //для галереи комментариев
-var right = 0;      //Для подсчета отступа при нажатии на стрелку
+var right = 0;          //Для подсчета отступа при нажатии на стрелку
+var blocks = 4;         //Количество блоков в коментах
+var step;               //Ширига 1 блока
+var max_right = blocks - 3;    //Максимальное поворот направо, 3 блока по центру
+                        //Каждый блок справа +400 px к max_right
+                        // max screen = 1250; + 313px
 
+// показывать +7 при нажатии на input && Менять цвет
+function show_id(){
+    document.getElementById(id_p).style.display = "block";
+    document.getElementById(id_p).style.color = id_color;
+    document.getElementById(id_input).style.left = id_left;
+    document.getElementById(id_input).style.color = id_color;
+}
 
 //top form
 function open_type_auto(){
@@ -59,30 +79,32 @@ function type_bottom(){
     open_type_auto_bottom();
 }
 
-// callback input
-function Open_Order_a_callback(){
-    document.getElementById('Callback').style.display = 'flex';
+// Короче открытие avt
+function Open_avt(){
+    document.getElementById(id_avt).style.display = 'flex';
     setTimeout(() => {
-        document.getElementById('Callback').style.opacity = '100';
+        document.getElementById(id_avt).style.opacity = '100';
+    }, 0);
+
+    setTimeout(() => {
+        if(id_avt == 'the_order_has_been_sent'){
+            Close_avt(id_avt = 'Callback');
+        } 
     }, 0);
 }
-function Close_Order_a_callback(){
-    document.getElementById('Callback').style.opacity = '0';
+function Close_avt(){
+    document.getElementById(id_avt).style.opacity = '0';
     setTimeout(() => {
-        document.getElementById('Callback').style.display = 'none';
+        document.getElementById(id_avt).style.display = 'none';
     }, 500);
 }
-
 //galerey img
 
 function galerey(){
     galerey_left = img - 1;
     galerey_right = img + 1;
 
-    console.log(perelist)
-    console.log("1 -","left",galerey_left,"","img",img,"","right",galerey_right);
-
-    if (img > max_img_galer){
+    if(img > max_img_galer){
         img = 1;
         galerey_right = 2;
     }else if (img < 1){
@@ -96,15 +118,46 @@ function galerey(){
     if(galerey_left == 0){
         galerey_left = max_img_galer;
     }
-
-    console.log("2 -","left",galerey_left,"","img",img,"","right",galerey_right);
-    console.log("")
     
     if(perelist == 0){
-        left_scroll_img(img);
+        windowOuterWidth = window.outerWidth;
+
+        document.getElementById('left_img_zapolnenye').style.opacity = '100';
+        document.getElementById('left_img_zapolnenye').style.transition = '0.5s all ease';
+        setTimeout(() => {
+            if (windowOuterWidth <= 1250){
+                document.getElementById('left_img_zapolnenye').style.left = '242px';
+            }else{
+                document.getElementById('left_img_zapolnenye').style.left = '284px';
+            }
+            setTimeout(() => {
+                document.getElementById('left_img_zapolnenye').style.transition = 'none';
+                document.getElementById('left_img_zapolnenye').style.opacity = '0';
+                document.getElementById('left_img_zapolnenye').style.left = '-300px';
+                document.getElementById('left_img_zapolnenye').src = "img/galerey_images/galerey_images_"+galerey_left+".png";
+            }, 500);
+        }, 0);
     }
+
     if(perelist == 1){
-        right_scroll_img(img);
+        windowOuterWidth = window.outerWidth;
+    
+        document.getElementById('right_img_zapolnenye').style.opacity = '100';
+        document.getElementById('right_img_zapolnenye').style.transition = '0.5s all ease';    
+
+        setTimeout(() => {
+            if (windowOuterWidth <= 1250){
+                document.getElementById('right_img_zapolnenye').style.left = '-450px';
+            }else{
+                document.getElementById('right_img_zapolnenye').style.left = '-584px';
+            }
+            setTimeout(() => {
+                document.getElementById('right_img_zapolnenye').style.transition = 'none';
+                document.getElementById('right_img_zapolnenye').style.opacity = '0';
+                document.getElementById('right_img_zapolnenye').style.left = '0';
+                document.getElementById('right_img_zapolnenye').src = "img/galerey_images/galerey_images_"+galerey_right+".png";
+            }, 500);
+        }, 0);
     }
 
     document.getElementById('galerey_left_img_bg').style.backgroundColor = "#fff";
@@ -127,59 +180,39 @@ function galerey(){
     }, 150);
 }
 
-function left_scroll_img(){
-    document.getElementById('left_img_zapolnenye').style.opacity = '100';
-    document.getElementById('left_img_zapolnenye').style.transition = '0.5s all ease';
-    setTimeout(() => {
-        document.getElementById('left_img_zapolnenye').style.left = '284px';
-        setTimeout(() => {
-            document.getElementById('left_img_zapolnenye').style.transition = 'none';
-            document.getElementById('left_img_zapolnenye').style.opacity = '0';
-            document.getElementById('left_img_zapolnenye').style.left = '-300px';
-            document.getElementById('left_img_zapolnenye').src = "img/galerey_images/galerey_images_"+galerey_left+".png";
-            console.log(galerey_left,img,galerey_right)
-        }, 500);
-    }, 0);
-}
-function right_scroll_img(){
-    document.getElementById('right_img_zapolnenye').style.opacity = '100';
-    document.getElementById('right_img_zapolnenye').style.transition = '0.5s all ease';    
-
-    setTimeout(() => {
-        document.getElementById('right_img_zapolnenye').style.left = '-584px';
-        setTimeout(() => {
-            document.getElementById('right_img_zapolnenye').style.transition = 'none';
-            document.getElementById('right_img_zapolnenye').style.opacity = '0';
-            document.getElementById('right_img_zapolnenye').style.left = '0';
-            document.getElementById('right_img_zapolnenye').src = "img/galerey_images/galerey_images_"+galerey_right+".png";
-            console.log(galerey_left,img,galerey_right)
-        }, 500);
-    }, 0);
-}
-
-
 // Galerey comments
-
 function scroll_galerey_comments(){
-    var max_right = 400;    //Максимальное поворот направо, 3 блока по центру
-                            //Каждый блок справа +400 px к max_right
+    windowOuterWidth = window.outerWidth;
+
+    // подсчет чему равен 1 блок коментов
+    
+    if(windowOuterWidth > 1250){
+        step = 400;
+    }else if(windowOuterWidth <= 1250){
+        step = 333;
+    }
+
+    // подсчет Сколько максимальный поворот направо
+    max_right = max_right * step;
+
     if (perelist == 1){
-        right = right + 400;
+        right = right + step;
         document.getElementById('galerey_comments').scrollTo(right,0);
         document.getElementById('left_arr').style.display = "block";
         setTimeout(() => {
             document.getElementById('left_arr').style.opacity = "100";
         }, 0);
-        if (right >= max_right){
+        if (right >= max_right-1){
             document.getElementById('right_arr').style.opacity = "0";
             setTimeout(() => {
                 document.getElementById('right_arr').style.display = "none";
             }, 500);
+            right = max_right;
         }
     }
     
     if (perelist == 0){
-        right = right - 400;
+        right = right - step;
         document.getElementById('galerey_comments').scrollTo(right,0);
         
         document.getElementById('right_arr').style.display = "block";
@@ -187,11 +220,12 @@ function scroll_galerey_comments(){
             document.getElementById('right_arr').style.opacity = "100";
         }, 0);
 
-        if (right == 0){
+        if (right >= 0){
             document.getElementById('left_arr').style.opacity = "0";
             setTimeout(() => {
                 document.getElementById('left_arr').style.display = "none";
             }, 500);
+            right = 0;
         }
     }
     
