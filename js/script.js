@@ -1,6 +1,8 @@
 'use strict'
 
 var windowOuterWidth; //Для получения ширины экрана
+var windowOuterWidth_static = 0; //Для работы если изменялось разрешение
+
 var type_car;   // Для показа в форме, автомобиля, который выбрал пользователь
 var id_p;       // Для того чтобы получить id "+7" в input с номером
 var id_input;   // Для того чтобы получить id "+7" в input с номером
@@ -14,6 +16,7 @@ var img = 2;            //Начальное изображение
 var galerey_left;
 var galerey_right;
 var max_img_galer = 7;  //Количество всех изображений
+var left; //для адаптации см. в коде, меня все заебало
 
 var perelist = 0;   //Для подсчета перелистывания right or left, с помощью булевого значения
                     //Используется в галереи фотографий и комментариев
@@ -21,8 +24,8 @@ var perelist = 0;   //Для подсчета перелистывания right
 var right = 0;          //Для подсчета отступа при нажатии на стрелку
 var blocks = 4;         //Количество блоков в коментах
 var step;               //Ширига 1 блока
-var max_right = blocks - 3;    //Максимальное поворот направо, 3 блока по центру
-                        //Каждый блок справа +400 px к max_right
+var max_right = blocks - 3;     //Максимальное поворот направо, 3 блока по центру
+var max_right_static = max_right//Каждый блок справа +400 px к max_right
                         // max screen = 1250; + 313px
 
 // показывать +7 при нажатии на input && Менять цвет
@@ -98,8 +101,8 @@ function Close_avt(){
         document.getElementById(id_avt).style.display = 'none';
     }, 500);
 }
-//galerey img
 
+//galerey img
 function galerey(){
     galerey_left = img - 1;
     galerey_right = img + 1;
@@ -122,14 +125,20 @@ function galerey(){
     if(perelist == 0){
         windowOuterWidth = window.outerWidth;
 
+        if(windowOuterWidth > 1250){
+            left = 284;
+        }else if(windowOuterWidth <= 1250){
+            left = 242;
+            if(windowOuterWidth <= 1050){
+                left = 198;
+            }
+        }
+
         document.getElementById('left_img_zapolnenye').style.opacity = '100';
         document.getElementById('left_img_zapolnenye').style.transition = '0.5s all ease';
+
         setTimeout(() => {
-            if (windowOuterWidth <= 1250){
-                document.getElementById('left_img_zapolnenye').style.left = '242px';
-            }else{
-                document.getElementById('left_img_zapolnenye').style.left = '284px';
-            }
+            document.getElementById('left_img_zapolnenye').style.left = left+"px";
             setTimeout(() => {
                 document.getElementById('left_img_zapolnenye').style.transition = 'none';
                 document.getElementById('left_img_zapolnenye').style.opacity = '0';
@@ -141,16 +150,21 @@ function galerey(){
 
     if(perelist == 1){
         windowOuterWidth = window.outerWidth;
-    
+
+        if(windowOuterWidth > 1250){
+            left = -450;
+        }else if(windowOuterWidth <= 1250){
+            left = -584;
+            if(windowOuterWidth <= 1050){
+                left = -406;
+            }
+        }
+        
         document.getElementById('right_img_zapolnenye').style.opacity = '100';
         document.getElementById('right_img_zapolnenye').style.transition = '0.5s all ease';    
 
         setTimeout(() => {
-            if (windowOuterWidth <= 1250){
-                document.getElementById('right_img_zapolnenye').style.left = '-450px';
-            }else{
-                document.getElementById('right_img_zapolnenye').style.left = '-584px';
-            }
+            document.getElementById('right_img_zapolnenye').style.left = left+"px";
             setTimeout(() => {
                 document.getElementById('right_img_zapolnenye').style.transition = 'none';
                 document.getElementById('right_img_zapolnenye').style.opacity = '0';
@@ -190,10 +204,22 @@ function scroll_galerey_comments(){
         step = 400;
     }else if(windowOuterWidth <= 1250){
         step = 333;
+        if(windowOuterWidth <= 1050){
+            step = 422;
+        }
     }
 
-    // подсчет Сколько максимальный поворот направо
-    max_right = max_right * step;
+    if (windowOuterWidth != windowOuterWidth_static){
+        windowOuterWidth_static = windowOuterWidth;
+        
+        max_right = max_right_static;
+
+        if(windowOuterWidth <= 1050){
+            max_right = max_right + 1;
+        }
+        max_right = max_right * step;
+    }
+
 
     if (perelist == 1){
         right = right + step;
@@ -220,7 +246,7 @@ function scroll_galerey_comments(){
             document.getElementById('right_arr').style.opacity = "100";
         }, 0);
 
-        if (right >= 0){
+        if (right <= 0){
             document.getElementById('left_arr').style.opacity = "0";
             setTimeout(() => {
                 document.getElementById('left_arr').style.display = "none";
@@ -228,5 +254,4 @@ function scroll_galerey_comments(){
             right = 0;
         }
     }
-    
 }
