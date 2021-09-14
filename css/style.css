@@ -16,8 +16,15 @@
     font-family: Gadugi;
     src: url(../font/Gadugi.ttf);
 }
-a{cursor: pointer;font-family: 'Corbel';}
-button{cursor: pointer;}
+a{cursor: pointer;font-family: 'Corbel';transition: 0.3 all ease;}
+
+button{
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+button:hover{
+    text-shadow: 2px 2px 10px #FFFFFF;
+}
 p{font-family: 'Montserrat';}
 h1{font-family: 'Corbel';}
 h2{font-family: 'Corbel';}
@@ -382,10 +389,18 @@ header ul li:last-child{
     border-radius: 90px;
     display: inline-block;
 }
+.left .soc .links a:hover{
+    color: #B5B5B5;
+}
 .left .soc .links .insta{background-image: url(../img/instagram.png);}
 .left .soc .links .vk{background-image: url(../img/vk.png);}
 .left .soc .links .tik-toc{background-image: url(../img/tik-tok.png);}
 .left .soc .links .you-tube{background-image: url(../img/youtube.png);}
+
+.left .soc .links .insta:hover{background-image: url(../img/instagram_hover.png);}
+.left .soc .links .vk:hover{background-image: url(../img/vk_hover.png);}
+.left .soc .links .tik-toc:hover{background-image: url(../img/tik-tok_hover.png);}
+.left .soc .links .you-tube:hover{background-image: url(../img/youtube_hover.png);}
 .title .content .urgent_form .right{
     text-align: center;
     display: table-cell;
@@ -638,6 +653,9 @@ background-color: #e9ecef;
     background-color: #E0391E;
     border-radius: 6px;
 }
+.content .about_us .left>div a:hover{
+    text-shadow: 2px 2px 10px #FFFFFF;
+}
 .content .about_us .left>div h3{
 
     margin-top: 50px;
@@ -706,7 +724,9 @@ background-color: #e9ecef;
     color: #E0391E;
     font-weight: bold;
 }
-
+.content .about_us .right>div a:hover{
+    color: #B5B5B5;
+}
 
 
 .content .cost{
