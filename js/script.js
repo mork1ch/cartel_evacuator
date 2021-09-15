@@ -9,7 +9,7 @@ var id_input;   // Для того чтобы получить id "+7" в input 
 var id_color;   // Для того чтобы получить id "+7" в input с номером
 var id_left;    // Для того чтобы получить id "+7" в input с номером
 var id_avt;     // Для открытия avt
-var id_close_avt;     // Для открытия avt
+var id_close_avt;     // Для скрытия avt
 
 //Для галереи фотографий
 var img = 2;            //Начальное изображение
@@ -152,9 +152,9 @@ function galerey(){
         windowOuterWidth = window.outerWidth;
 
         if(windowOuterWidth > 1250){
-            left = -450;
-        }else if(windowOuterWidth <= 1250){
             left = -584;
+        }else if(windowOuterWidth <= 1250){
+            left = -450;
             if(windowOuterWidth <= 1050){
                 left = -406;
             }
@@ -182,8 +182,8 @@ function galerey(){
     }, 500);
     setTimeout(() => {
 
-        document.getElementById('galerey_left').style.backgroundImage = "url(../img/galerey_images/galerey_images_"+galerey_left+".png)";
-        document.getElementById('galerey_right').style.backgroundImage = "url(../img/galerey_images/galerey_images_"+galerey_right+".png)";
+        document.getElementById('galerey_left').style.backgroundImage = "url(img/galerey_images/galerey_images_"+galerey_left+".png)";
+        document.getElementById('galerey_right').style.backgroundImage = "url(img/galerey_images/galerey_images_"+galerey_right+".png)";
 
         document.getElementById('galerey_left_img_bg').style.backgroundColor = "#ffffff66";
         document.getElementById('galerey_right_img_bg').style.backgroundColor = "#ffffff66"; 

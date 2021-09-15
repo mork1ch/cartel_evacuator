@@ -1,0 +1,241 @@
+
+.title .content .urgent_form .left .soc p{
+    font-weight: 400;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.left .soc .links a{
+    width: 45px;
+    height: 45px;
+    background-size: 100% auto;
+    background-position: center;
+    margin-right: 35px;
+    border-radius: 90px;
+    display: inline-block;
+}
+.left .soc .links .insta{background-image: url(../img/instagram.png);}
+.left .soc .links .vk{background-image: url(../img/vk.png);}
+.left .soc .links .tik-toc{background-image: url(../img/tik-tok.png);}
+.left .soc .links .you-tube{background-image: url(../img/youtube.png);}
+
+
+
+
+
+
+
+
+.content .right .form{
+    width: 336px;
+    padding: 0 72px;
+    background-color: #020914;
+    border-top: 13px solid #E0391E;
+    color: #fff;
+    transition: 1s all ease;
+}
+.content .form h2{
+    font-family: 'Corbel';
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 0.13em;
+    margin: 30px 0 13px;
+}
+.content .form .Field{
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.content .form p{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+}
+
+.content .form input:not(input[type="checkbox"]){
+    padding: 9px 10px 9px 66px;
+    width: 260px;
+    border-radius: 6px;
+    background-color: #041226;
+    border: none;
+    color: #FFFFFF66;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    letter-spacing: 0.1em;
+}
+.content .form input::placeholder{
+    color: #FFFFFF66;
+}
+.content .form .img{
+    width: 20px;
+    height: 20px;
+
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    float: right;
+    position: relative;
+    right: 300px;
+    top: 28px;
+
+    z-index: 2;
+}
+.content .form .tel{background-image: url(../img/tel.png);}
+
+.title .content .urgent_form .right .form .Field:nth-child(2) input[type="text"]{
+    padding-left: 87px;
+    width: 239px;
+}
+.title .content .urgent_form .right .form .Field .number7{
+    color: #FFFFFF66;
+}
+
+.content .form .number7{
+    position: relative;
+    float: left;
+    margin-bottom: 0;
+    top: 29px;
+    left: 66px;
+}
+.content .form .geo{
+    background-image: url(../img/geo.png);
+    background-size: auto 100%;
+}
+.content .form .triangle{
+    background-image: url(../img/triangle.png);
+    top: 8px;
+    transition: 1s all ease;
+}
+.content .form .menu_auto{
+    width: 336px;
+    height: 36px;
+    border-radius: 6px;
+    background-color: #041226;
+    border: none;
+    color: #FFFFFF66;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    transition: 1s all ease;
+}
+.content .form .menu_auto input{
+    position: relative;
+    top: -20px;
+}
+.content .form .menu_auto .hidden_menu_auto{
+    display: none;
+    border-radius: 6px;
+    position: relative;
+    padding: 0px 0;
+    opacity: 0;
+    transition: 1s all ease;
+    background-color: #041226;
+    top: -57px;
+    height: 40px;
+}
+.content .form .menu_auto p{
+    padding-top: 9px;
+    padding-left: 66px;
+    cursor: pointer;
+}
+.content .form .menu_auto p:hover{
+    color: #fff;
+}
+.content .form button{
+    background-color: #E0391E;
+    border: none;
+    color: #fff;
+    width: 280px;
+    padding: 6px 0;
+    border-radius: 6px;
+    font-size: 20px;
+    margin-bottom: 33px;
+}
+.content .form .checkboxses{
+    padding: 19px 16px;
+    border-radius: 6px;
+    background-color: #041226;
+    border: none;
+    color: #FFFFFF66;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    letter-spacing: 0.1em;
+}
+.content .form .checkboxses label{
+    display: block;
+    margin-left: 1px;
+    margin-bottom: 15px;
+}
+.content .form .checkboxses label:last-child{
+    margin-bottom: 0;
+}
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.custom-checkbox+label::before {
+    position: relative;
+    top: 3px;
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 90px;
+    margin-right: 0.5em;
+
+    background-image: url(../img/chekbox/chek.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto; 
+}
+.custom-checkbox:checked+label::before {
+    background-image: url(../img/chekbox/chek_actv.png);
+}
+.custom-checkbox:disabled+label::before {
+background-color: #e9ecef;
+}
+
+/* bottom form */
+
+.Contacts .right .form{
+    background-color: #fff;
+    color: #041226;
+    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.05);
+}
+.Contacts .right .form input:not(input[type="checkbox"]){
+    background-color: #fff;
+    box-shadow: inset 0px 2px 64px rgba(0, 0, 0, 0.03);
+    color: #041226;
+}
+.Contacts .right .form input::placeholder{
+    color: #04122666;
+}
+.Contacts .right .form .checkboxses{
+    background-color: #fff;
+    box-shadow: inset 0px 2px 64px rgba(0, 0, 0, 0.03);
+    color: #041226;
+}
+.Contacts .right .form .menu_auto{
+    background-color: #fff;
+    box-shadow: inset 0px 2px 64px rgba(0, 0, 0, 0.03);
+    color: #04122666;
+}
+.Contacts .right .form .menu_auto .hidden_menu_auto{
+    background-color: #fff;
+    box-shadow: inset 0px 2px 64px rgba(0, 0, 0, 0.03);
+    color: #04122666;
+}
+.Contacts .right .form .menu_auto p:hover{
+    color: #020914;
+}
+.Contacts .right .form .Field:nth-child(2) input[type="text"]{
+    padding-left: 87px;
+    width: 239px;
+}
+.Contacts .right .form .Field .number7{
+    color: #04122666;
+}
