@@ -67,6 +67,9 @@ function open_type_auto(){
             document.getElementById('menu_auto').style.height = "630px";
             }else if(windowOuterWidth <= 800){
                 document.getElementById('menu_auto').style.height = "250px";
+                if(windowOuterWidth <= 350){
+                    document.getElementById('menu_auto').style.height = "80px";
+                }
             }
         }
 
