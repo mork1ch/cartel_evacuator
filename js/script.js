@@ -31,15 +31,31 @@ var max_right_static = max_right//Каждый блок справа +400 px к 
 
 // показывать +7 при нажатии на input && Менять цвет
 function show_id(){
+    windowOuterWidth = window.outerWidth;
+
     document.getElementById(id_p).style.display = "block";
     document.getElementById(id_p).style.color = id_color;
     document.getElementById(id_input).style.paddingLeft = id_left;
     document.getElementById(id_input).style.color = id_color;
+    if(mob == 1){
+        if(windowOuterWidth > 800){
+            document.getElementById('urgent_form_input').style.paddingLeft = '160px';
+            document.getElementById('urgent_form_input').style.paddingRight = '0';
+        }else if(windowOuterWidth <= 800){
+            document.getElementById('urgent_form_input').style.paddingLeft = '90px';
+            document.getElementById('urgent_form_input').style.paddingRight = '0';
+            if(windowOuterWidth <= 350){
+                document.getElementById('urgent_form_input').style.paddingLeft = '66px';
+                document.getElementById('urgent_form_input').style.paddingRight = '0';
+            }
+        }
+    }
 }
 
 //top form
 function open_type_auto(){
     var rotate = document.getElementById('triangle').style.transform;
+    windowOuterWidth = window.outerWidth;
 
     if (rotate == "rotate(0deg)"){
         document.getElementById('triangle').style.transform = "rotate(60deg)";
@@ -47,7 +63,11 @@ function open_type_auto(){
         if(mob == 0){
             document.getElementById('menu_auto').style.height = "270px";
         }else if(mob == 1){
+            if(windowOuterWidth > 800){
             document.getElementById('menu_auto').style.height = "630px";
+            }else if(windowOuterWidth <= 800){
+                document.getElementById('menu_auto').style.height = "250px";
+            }
         }
 
         document.getElementById('hidden_menu_auto').style.display = 'block';
@@ -277,12 +297,23 @@ function scroll_galerey_comments(){
 
 $(function() {
     if(mob == 1){
-        $(window).scroll(function() {
-            if($(this).scrollTop() > 2500) {
-                $('.slider_call').fadeIn();
-            } else {
-                $('.slider_call').fadeOut();
-            }
-        });
+        windowOuterWidth = window.outerWidth;
+        if(windowOuterWidth > 800){
+            $(window).scroll(function() {
+                if($(this).scrollTop() > 2500) {
+                    $('.slider_call').fadeIn();
+                } else {
+                    $('.slider_call').fadeOut();
+                }
+            });
+        }else if(windowOuterWidth <= 800){
+            $(window).scroll(function() {
+                if($(this).scrollTop() > 800) {
+                    $('.slider_call').fadeIn();
+                } else {
+                    $('.slider_call').fadeOut();
+                }
+            });
+        }
     }
 });

@@ -45,8 +45,10 @@ h3{
 .content{
     width: 80%;
     margin: 0 auto;
-
-    /* background-color: rgb(255, 0, 0); */
+}
+iframe{
+    width: 480px;
+    height: 270px;
 }
 .big_papa{ 
     font-family: 'Corbel';
@@ -260,7 +262,6 @@ h3{
     background-size: auto 100%;
 }
 #form_call .info .Field .triangle{background-image: url(../img/triangle.png);}
-#form_call .info .Field{}
 #form_call .info .Field .number7{
     float: left;
     width: 0;
@@ -949,3 +950,344 @@ footer .content .created_by_toda{
     font-size: 3em;
     margin-bottom: 200px;
 }
+footer .content .created_by_toda a{
+    background-color: #fff;
+}
+
+
+
+@media screen and (max-width: 600px){
+    /* alertation */
+    .alert .info{
+        min-height: 100px;
+        width: 60%;
+        font-size: 20px;
+        border-radius: 6px;
+    }
+    .alert .info .img_krest{
+        width: 25px;
+        height: 25px;
+    }
+    #menu_burger ul li{
+        margin-bottom: 20px;
+    }
+    #form_call .info .Field .img{
+        width: 25px;
+        height: 25px;
+        top: 30px;
+    }
+    #form_call .info .Field .number7{
+        top: 34px;
+        left: 10px;
+    }
+    #form_call .info .Field:nth-child(5) input{
+        margin-bottom: 10px;
+    }
+    #form_call .info .Field input:not(input[type="checkbox"]){
+        width: 190px;
+        left: -40px;
+        padding-left: 70px;
+        padding-right: 3px;
+        margin-bottom: 10px;
+    }
+    #form_call .info .Field .hidden_menu_auto{
+        width: 140px;
+        padding-left: 70px;
+        margin-left: 10px;
+    }
+    #form_call .checkboxses{
+        padding: 19px 0;
+    }
+    #form_call .checkboxses label{
+        font-size: 15px;
+    }
+    #form_call .custom-checkbox+label::before{
+        width: 18px;
+        height: 18px;
+    }
+    #form_call .info button{
+        font-size: 15px;
+        border-radius: 6px;
+        padding: 10px 30px;
+        margin: 0;
+    }
+    /* end */
+
+    .slider_call{
+        display: none;
+    }
+    .slider_call a{
+        width: 70px;
+        height: 70px;
+
+        bottom: 20px;
+        right: 20px;
+
+    }
+    .content{
+        width: 374px;
+        margin: auto;
+    }
+    .title{
+        height: 800px;
+    }
+    .title .content .top .img{
+        width: 48px;
+        height: 54px;
+    }
+    .title .content .top .logo_name{
+        font-size: 18px;
+    }
+    .title .content .top p{
+        font-size: 12px;
+    }
+    .title .content .top .right .menu .img{
+        width: 34px;
+        height: 24px;
+        margin: 20px 0;
+    }
+    .title .content .urgent_form h1{
+        font-size: 20px;
+    }
+    .title .content .urgent_form .information{
+        margin-bottom: 147px;
+    }
+    .title .content .urgent_form .information p{
+        font-size: 14px;
+    }
+    .title .content .urgent_form button{
+        font-size: 15px;
+        padding: 6px 14px;
+        border-radius: 6px;
+    }
+    .title .content .urgent_form .call_a .img{
+        width: 70px;
+        height: 70px;
+    }
+    .title .content .urgent_form .call_a .text{
+        font-size: 12px;
+        padding-left: 20px;
+    }
+    .title .content .urgent_form .call_a .text p:first-child{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .content .about_us{
+        display: block;
+    }
+    .content .about_us>div h2{
+        font-size: 25px;
+    }
+    .content .about_us>div p{
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+    .content .about_us>div:first-child a{
+        font-size: 15px;
+    }
+    .content .about_us>div h3{
+        font-size: 20px;
+    }
+    iframe{
+        width: 374px;
+        height: 226px;
+    }
+    .content .about_us>div{
+        margin-bottom: 30px;
+    }
+    .content .about_us>div a{
+        font-size: 20px;
+    }
+    .content .cost h2{
+        font-size: 25px;
+    }
+    .content .cost>p{
+        font-size: 15px;
+        margin-bottom: 50px;
+    }
+    .content .cost .cost_images .img{
+        height: 275px;
+    }
+    .content .cost .cost_images .img .shadow{
+        top: 118px;
+        height: 156px;
+    }
+    .content .cost .cost_images .img .shadow p{
+        font-size: 15px;
+    }
+    .content .cost .cost_images .img .shadow .right{
+        width: 50px;
+    }
+    .content .cost .cost_images .info h2{
+        font-size: 20px;
+    }
+    .content .cost .cost_images .info p{
+        font-size: 15px;
+    }
+    .content .cost .cost_images .info button{
+        font-size: 15px;
+    }
+    .content .galerey h2{
+        font-size: 30px;
+    }
+    .content .galerey p{
+        width: 100%;
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    .content .galerey .static_banner{
+        width: 40px;
+        height: 40px;
+
+        right: -320px;
+        bottom: -260px;
+    }
+    .Reviews .content h2{
+        font-size: 30px;
+    }
+    .Reviews .comments_galerey .carousel-cell{
+        height: 192px;
+    }
+    .Reviews .comments_galerey .carousel-cell #comment_block{
+        height: 192px;
+    }
+    .Reviews .comments_galerey .carousel-cell>div .left .img{
+        width: 51px;
+        height: 51px;
+    }
+    .Reviews .comments_galerey .carousel-cell>div .right{
+        font-size: 15px;
+    }
+    .Reviews .width_buttons button{
+        font-size: 15px;
+        padding: 10px 60px;
+        border-radius: 6px;
+    }
+    .Reviews .content{
+        margin: 0;
+    }
+    .Contacts h2{
+        font-size: 30px;
+    }
+    .Contacts p{
+        font-size: 15px;
+    }
+    .Contacts p:nth-child(2){
+        font-size: 15px;
+    }
+    .Contacts p:nth-child(3){
+        font-size: 25px;
+    }
+    .soc .links a{
+        width: 35px;
+        height: 35px;
+    }
+    .Contacts button{
+        font-size: 15px;
+        border-radius: 6px;
+        padding: 10px 60px;
+    }
+    footer .content .logotype .img{
+        width: 48px;
+        height: 54px;
+    }
+    footer .content .logotype .name .logo_name{
+        font-size: 18px;
+    }
+    footer .content .logotype .name p{
+        font-size: 12px;
+    }
+    footer .content .right .slider{
+        width: 70px;
+        height: 70px;
+    }
+    footer .content .right .slider a{
+        width: 37px;
+        height: 37px;
+        left: 18px;
+        top: 12px;
+    }
+    footer .content .approve{
+        font-size: 15px;
+    }
+    footer .content .number p{
+        font-size: 25px;
+    }
+    footer .content>p{
+        font-size: 25px;
+    }
+    footer .content .politics{
+        margin-bottom: 128px;
+    }
+    footer .content .politics a{
+        font-size: 15px;
+    }
+    footer .content .created_by_toda{
+        font-size: 20px;
+        margin-bottom: 80px;
+    }
+}
+@media screen and (max-width: 375px){
+    /* alerts */
+
+    .alert .info{
+        width: 75%;
+    }
+    #form_call .info .Field input:not(input[type="checkbox"]){
+        left: -20px;
+    }
+    #form_call .menu_auto{
+        height: 80px;
+    }
+    #Reviews_form .info #textarea{
+        min-height: 100px;
+    }
+    .alert .info button{
+        font-size: 15px;
+        padding: 10px 60px;
+        border-radius: 6px;
+        margin-top: 0;
+    }
+    /* end */
+
+
+
+    .alert .info{
+        padding: 25px;
+    }
+    .content{
+        width: 300px;
+        margin: auto;
+    }
+    .title .content .top .name{
+        left: 10px;
+    }
+    iframe{
+        width: 300px;
+        height: 194px;
+    }
+    .content .galerey .static_banner{
+        right: -255px;
+        bottom: -215px;
+    }
+    .content .cost .cost_images .img .shadow{
+        top: 92px;
+    }
+    footer .content .logotype .name{
+        padding-left: 10px;
+    }
+    footer .content .right .slider{
+        width: 50px;
+        background-size: auto 100%;
+    }
+    footer .content .logotype{
+        margin-bottom: 20px;
+    }
+    footer .content .approve{
+        margin-bottom: 40px;
+    }
+    footer .content>p{
+        font-size: 15px;
+    }
+}
+/* @media screen and (max-width: 1050px){} */
