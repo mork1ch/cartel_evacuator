@@ -55,7 +55,10 @@ h3{
     color: #E0391E;
 }
 
-/* for scripts alerts */
+
+
+
+                                                            /* for scripts alerts */
 .alert{
     font-family: 'Montserrat';
     width: 100%;
@@ -69,19 +72,21 @@ h3{
     transition: 0.5s all ease;
 }
 .alert .info{
-    width: 587px;
-    height: 184px;
+    width: 80%;
+    min-height: 500px;
     
     padding: 50px;
 
     background-color: #fff;
     position: relative;
     z-index: 11;
-    border-radius: 6px;
+    border-radius: 20px;
+
+    font-size: 4.8em;
 }
-.alert .info .img{
-    width: 16px;
-    height: 16px;
+.alert .info .img_krest{
+    width: 80px;
+    height: 80px;
     
     background-size: 100% auto;
     background-position: center;
@@ -92,8 +97,6 @@ h3{
     position: relative;
     top: -20px;
     right: -20px;
-
-    cursor: pointer;
 }
 .alert .info h2{
     font-family: 'Corbel';
@@ -117,12 +120,14 @@ h3{
     margin-bottom: 40px;
 }
 .alert .info button{
-    display: block;
+    font-size: 1em;
     color: #fff;
     background-color: #E0391E;
-    border-radius: 6px;
     border: none;
-    padding: 6px 60px;
+    padding: 10px 80px;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 40px;
 }
 .alert .closeCallback{
     width: 100%;
@@ -131,34 +136,49 @@ h3{
     position: fixed;
     display: flex;
 }
+.slider_call a{
+    width: 200px;
+    height: 200px;
 
+    background-image: url(../img/call_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    position: fixed;
+
+    border-radius: 100%;
+    
+    bottom: 100px;
+    right: 100px;
+    z-index: 3;
+}
 #Reviews_form .info{
-    width: 604px;
-    height: 469px;
+    width: 80%;
 }
 #Reviews_form .info h2{
-    width: 467px;
+    width: 100%;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 0.9em;
     margin-bottom: 20px;
 }
 #Reviews_form .info .num{
+    width: 0;
     float: left;
     position: relative;
     top: 9px;
     left: 10px;
     z-index: 2;
-    font-size: 15px;
+    font-size: 0.7em;
     color: rgba(4, 18, 38, 0.4);
     display: none;
 }
 #Reviews_form .info input{
-    width: 336px;
+    width: 80%;
     padding-left: 30px;
     display: block;
     position: relative;
     margin-left: 0;
-    font-size: 15px;
+    font-size: 0.7em;
     margin-bottom: 15px;
     background: #FFFFFF;
     color: rgba(4, 18, 38, 0.4);
@@ -174,9 +194,9 @@ h3{
 }
 #Reviews_form .info #textarea{
     padding: 10px 10px 10px 30px;
-    width: 336px;
-    min-height: 127px;
-    font-size: 15px;
+    width: 80%;
+    min-height: 300px;
+    font-size: 0.7em;
     border: 0;
     box-shadow: inset 0px 2px 64px rgba(0, 0, 0, 0.03);
     resize: none;
@@ -185,29 +205,169 @@ h3{
     font-family: 'Montserrat';
 }
 #the_order_has_been_sent .info{
-    height: 310px;
     padding: 50px;
 }
 #the_order_has_been_sent .info h2{
-    width: 467px;
-    font-size: 30px;
+    width: 100%;
+    font-size: 0.8em;
     margin-bottom: 50px;
 }
 #the_order_has_been_sent .info .thx{
     margin-bottom: 50px;
 }
 #the_order_has_been_sent .info .thx p:first-child{
-    font-size: 20px;
+    font-size: 0.6em;
     margin-bottom: 5px;
 }
 #the_order_has_been_sent .info .thx p:last-child{
-    font-size: 15px;
+    font-size: 0.5em;
 }
 #the_order_has_been_sent .info .tel{
     color: #E0391E;
-    font-size: 25px;
+    font-size: 1.2em;
     margin-bottom: 5px;
 }
+#menu_burger ul li{
+    list-style-type: none;
+    margin-bottom: 80px;
+}
+#menu_burger ul li a{
+    color: #000;
+}
+#form_call .info h2{
+    font-size: 1em;
+}
+#form_call .info .Field p{
+    font-size: 0.7em;
+}
+#form_call .info .Field .img{
+    width: 50px;
+    height: 50px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    position: relative;
+    top: 25px;
+    z-index: 2;
+
+    float: left;
+}
+#form_call .info .Field .tel{background-image: url(../img/tel.png);}
+#form_call .info .Field .geo{
+    background-image: url(../img/geo.png);
+    background-size: auto 100%;
+}
+#form_call .info .Field .triangle{background-image: url(../img/triangle.png);}
+#form_call .info .Field{}
+#form_call .info .Field .number7{
+    float: left;
+    width: 0;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    top: 15px;
+    display: none;
+    font-size: 0.8em;
+}
+#form_call .info .Field input:not(input[type="checkbox"]){
+    font-size: 0.8em;
+    padding-left: 90px;
+
+    position: relative;
+    left: -80px;
+}
+#form_call .info .Field:nth-child(3) input{
+    width: 700px;
+    padding-right: 80px;
+}
+
+#form_call .menu_auto{
+    height: 138px;
+    transition: 1s all ease;
+}
+#form_call .info .Field .hidden_menu_auto{
+    width: 785px;
+
+    display: none;
+    background-color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    border: none;
+    box-shadow: inset 0px 2px 64px rgb(0 0 0 / 3%);
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 40px;
+
+    padding-left: 90px;
+    position: relative;
+    left: -21px;
+
+    opacity: 0;
+
+    transition: 1s all ease;
+}
+
+/* #form_call .info .Field */
+
+#form_call .checkboxses{
+    padding: 19px 16px;
+    border-radius: 6px;
+    border: none;
+    color: #FFFFFF66;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    letter-spacing: 0.1em;
+}
+#form_call .checkboxses label{
+    display: block;
+    margin-left: 1px;
+    margin-bottom: 15px;
+    color: #000;
+    font-size: 4.2em;
+}
+.content#form_call .checkboxses label:last-child{
+    margin-bottom: 0;
+}
+#form_call .custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+#form_call .custom-checkbox+label::before {
+    position: relative;
+    top: 3px;
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 90px;
+    margin-right: 0.5em;
+
+    background-image: url(../img/chekbox/chek.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto; 
+}
+#form_call .custom-checkbox:checked+label::before {
+    background-image: url(../img/chekbox/chek_actv.png);
+}
+#form_call .custom-checkbox:disabled+label::before {
+background-color: #e9ecef;
+}
+#form_call .info button{
+    font-size: 1em;
+    color: #fff;
+    background-color: #E0391E;
+    border: none;
+    padding: 10px 80px;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+
                                                                         /* end */
 
 .title{
@@ -515,49 +675,71 @@ h3{
 .content .galerey p{
     width: 915px;
     font-size: 3em;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
+}
+.content .galerey .carousel {
+    background: #EEE;
 }
 
-.content .galerey .images{
-    overflow: hidden;
+.content .galerey .carousel-cell {
+    width: 66%;
+    height: 400px;
+    margin-right: 10px;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
 }
-.content .galerey .images{}
+.content .galerey .carousel img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.content .galerey .static_banner{
+    width: 150px;
+    height: 150px;
+
+    display: inline-block;
+
+    background-image: url(../img/move.png);
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    background-color: rgba(0, 0, 0, 0);
+
+    position: relative;
+    right: -760px;
+    bottom: -670px;
+    z-index: 2;
+}
+
 
 
 /* Reviews */
 .Reviews{
     margin: 120px 0;
 }
-.Reviews .content .comments_galerey .galerey_comments{
+.Reviews .content{
     width: 100%;
-    font-size: 0;
-    white-space: nowrap;
-    overflow: hidden;
-
-    margin-top: 50px;
 }
-.Reviews .content .comments_galerey .galerey_comments>div{
-    width: 380px;
-    height: 254px;
-
-    background-color: #00000008;
-    border-radius: 6px;
-
-    display: inline-block;
-    margin-right: 20px;
-    white-space: normal;
+.Reviews .content h2{
+    font-size: 4.8em;
 }
-.Reviews .content .comments_galerey .galerey_comments>div:last-child{
-    margin-right: 0;
+.Reviews .comments_galerey .carousel-cell{
+    width: 100%;
+    height: 590px;
+    margin-right: 10px;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+    box-shadow: inset 0px 2px 64px rgba(0, 0, 0, 0.03);
+}
+.Reviews .comments_galerey .carousel-cell #comment_block{
+    width: 100%;
+    height: 400px;
 }
 
-.Reviews .content .comments_galerey #galerey_comments{
-    position: relative;
-    right: 0;
-}
-.Reviews .content .comments_galerey .galerey_comments>div .left .img{
-    width: 69px;
-    height: 69px;
+.Reviews .comments_galerey .carousel-cell>div .left .img{
+    width: 150px;
+    height: 150px;
     
     background-size: 100% auto;
     background-position: center;
@@ -565,71 +747,34 @@ h3{
 
     margin: 30px 0 0 20px;
 }
-.Reviews .content .comments_galerey .galerey_comments #comment_block:nth-child(1) .left .img{background-image: url(../img/ava/author_ava_1.png);}
-.Reviews .content .comments_galerey .galerey_comments #comment_block:nth-child(2) .left .img{background-image: url(../img/ava/author_ava_2.png);}
-.Reviews .content .comments_galerey .galerey_comments #comment_block:nth-child(3) .left .img{background-image: url(../img/ava/author_ava_3.png);}
-.Reviews .content .comments_galerey .galerey_comments #comment_block:nth-child(4) .left .img{background-image: url(../img/ava/author_ava_1.png);}
+.Reviews .comments_galerey .carousel-cell:nth-child(1) .left .img{background-image: url(../img/ava/author_ava_1.png);}
+.Reviews .comments_galerey .carousel-cell:nth-child(2) .left .img{background-image: url(../img/ava/author_ava_2.png);}
+.Reviews .comments_galerey .carousel-cell:nth-child(3) .left .img{background-image: url(../img/ava/author_ava_3.png);}
+.Reviews .comments_galerey .carousel-cell:nth-child(4) .left .img{background-image: url(../img/ava/author_ava_1.png);}
 
-.Reviews .content .comments_galerey .galerey_comments>div .right{
+.Reviews .comments_galerey .carousel-cell>div .right{
     margin: 30px 39px 0 0;
-    font-size: 20px;
+    font-size: 65px;
     font-weight: 400;
-    width: 222px;
+    width: 70%;
     color: #000;
 }
-.Reviews .content .comments_galerey .galerey_comments>div .right #comment{
+.Reviews .comments_galerey .carousel-cell>div .right #comment{
     margin-bottom: 44px;
-    height: 125px;
 }
-
-.Reviews .content .comments_galerey .buttons button{
-    width: 50px;
-    height: 50px;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-
-    background-color: #fff;
-    border: none;
-    border-radius: 90px;
-    display: inline-block;
+.Reviews .width_buttons{
+    text-align: center;
     position: relative;
-    top: -150px;
-    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.05);
-    background-image: url(../img/arrow_right_dark.png);
-
-    transition: 0.5s all ease;
+    top: 50px;
 }
-.Reviews .content .comments_galerey .buttons #left_arr{
-    transform: rotate(180deg);
-    float: left;
-    left: -25px;
-    display: none;
-}
-.Reviews .content .comments_galerey .buttons #right_arr{
-    float: right;
-    right: -25px;
-}
-.Reviews .content .width_buttons{
-    width: 100%;
-}
-.Reviews .content .width_buttons>.buttons{
-    font-size: 0;
-    width: 517px;
-    margin: 0 auto;
-}
-.Reviews .content .width_buttons>.buttons button{
-    border: none; 
-    background-color: #E0391E;
-    padding: 6px 68px;
-    margin-top: 50px;
-    margin-right: 30px;
+.Reviews .width_buttons button{
+    font-size: 2.8em;
     color: #fff;
-    border-radius: 6px;
-}
-.Reviews .content .width_buttons>.buttons button:last-child{
-    margin-right: 0;
+    background-color: #E0391E;
+    border: none;
+    padding: 30px 80px;
+    border-radius: 20px;
+    margin-bottom: 40px;
 }
 
 
@@ -638,55 +783,58 @@ h3{
     width: 100%;
     margin-bottom: 120px;
 }
-.Contacts>div{
-    display: table-cell;
-    vertical-align: middle;
-    float: none;
-    transition: 1s all ease;
-}
-.Contacts .left{
-    width: 580px;
-}
-.Contacts .left h2{
+.Contacts h2{
     font-weight: 700;
-    font-size: 30px;
+    font-size: 4.8em;
     margin-bottom: 30px;
 }
-.Contacts .left p{
-    width: 580px;
-    font-size: 20px;
+.Contacts p{
+    font-size: 3em;
     font-weight: 400;
     margin-bottom: 20px;
 }
-.Contacts .left p:nth-child(2){
+.Contacts p:nth-child(2){
     margin-bottom: 30px;
 }
-.Contacts .left p:nth-child(3){
+.Contacts p:nth-child(3){
     color: #E0391E;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 3.4em;
 }
-.Contacts .left p:nth-child(5){
+.Contacts p:nth-child(5){
     margin-bottom: 30px;
 }
 
-.Contacts .left .soc p{
+.Contacts .soc p{
     margin-bottom: 15px;
 }
-.Contacts .left .soc .links{
+.Contacts .soc .links{
     font-size: 0;
 }
 .Contacts .left .soc .links a:last-child{
     margin-right: 0;
 }
-.Contacts .left button{
+.soc .links a{
+    width: 100px;
+    height: 100px;
+    background-size: 100% auto;
+    background-position: center;
+    margin-right: 35px;
+    border-radius: 90px;
+    display: inline-block;
+}
+.soc .links .insta{background-image: url(../img/instagram.png);}
+.soc .links .vk{background-image: url(../img/vk.png);}
+.soc .links .tik-toc{background-image: url(../img/tik-tok.png);}
+.soc .links .you-tube{background-image: url(../img/youtube.png);}
+
+.Contacts button{
     background-color: #E0391E;
     border: none;
     color: #fff;
-    width: 280px;
-    padding: 6px 0;
-    border-radius: 6px;
-    font-size: 20px;
+    padding: 20px 60px;
+    border-radius: 20px;
+    font-size: 2.8em;
     margin-top: 30px;
 }
 .Contacts .right{
@@ -702,20 +850,22 @@ footer{
     background-image: url(../img/background_first_vlock.png);
 
     background-position: center;
-    background-size:100% auto;
+    background-size: auto 100%;
     background-repeat: no-repeat;
 
     color: #fff;
 
-    padding: 24px 0 20px;
+    padding: 50px 0 ;
 }
-footer .content .left .logotype{
+footer .content .logotype{
     display: table;
-    margin-bottom: 17px;
+    margin-bottom: 100px;
+    float: left;
 }
-footer .content .left .logotype .img {
-    width: 92px;
-    height: 102px;
+footer .content .logotype .img {
+    width: 200px;
+    height: 225px;
+    
     background-image: url(../img/logo.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -723,69 +873,79 @@ footer .content .left .logotype .img {
     display: table-cell;
     vertical-align: middle;
 }
-footer .content .left .logotype .name{
+footer .content .logotype .name{
     display: table-cell;
     vertical-align: middle;
 
     padding-left: 30px;
 }
-footer .content .left .logotype .name .logo_name{
+footer .content .logotype .name .logo_name{
     color: #E0391E;
     font-family: 'Gadugi';
     font-weight: 700;
-    font-size: 23px;
+    font-size: 2.4em;
     letter-spacing: 0.2em;
 
     padding-bottom: 5px;
 }
-footer .content .left .logotype .name p{
+footer .content .logotype .name p{
     color: #fff;
+    font-family: 'Corbel';
     font-weight: 400;
-    font-size: 12px;
+    font-size: 1.4em;
     letter-spacing: 0.29em;
 }
-footer .content .left .menu{
-    margin-bottom: 48px;
+footer .content .right .slider{
+    float: right;
+
+    width: 250px;
+    height: 250px;
+
+    
+    background-image: url(../img/slider.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-footer .content .left .menu ul {
-    text-align: center;
-}
-footer .content .left .menu ul li {
-    margin-right: 20px;
-    list-style-type: none;
-    display: inline;
-    font-size: 15px;
-    font-weight: 400;
-}
-footer .content .left .menu ul li a{
-    color: #fff;
-}
-footer .content .left .approve{
-    margin-bottom: 100px;
+footer .content .right .slider a{
+    width: 133px;
+    height: 130px;
+    display: inline-block;
+    border-radius: 100px;
+    position: relative;
+    left: 62px;
+    top: 44px;
 }
 
-footer .content .right{
-    text-align: right;
+footer .content .approve{
+    margin-bottom: 100px;
+    font-size: 3em;
 }
-footer .content .right .number p{
+footer .content .number p{
     color: #E0391E;
-    font-size: 25px;
+    font-size: 3.4em;
     margin-bottom: 30px;
 }
-footer .content .right p{
+footer .content>p{
     color: #fff;
-    font-size: 15px;
+    font-size: 2.4em;
     margin-bottom: 40px;
 }
-footer .content .right p:nth-child(3){
+footer .content p:nth-child(3){
     margin-bottom: 45px;
 }
-
-footer .content .right .politics a{
+footer .content .politics{
+    width: 300px;
+    margin-bottom: 500px;
+}
+footer .content .politics a{
     color: #FFFFFF80;
     letter-spacing: 0.2em;
     border-bottom: 1px solid #FFFFFF80;
+    font-size: 3em;
 }
 footer .content .created_by_toda{
     text-align: center;
+    font-size: 3em;
+    margin-bottom: 200px;
 }

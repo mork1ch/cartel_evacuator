@@ -10,6 +10,7 @@ var id_color;   // Для того чтобы получить id "+7" в input 
 var id_left;    // Для того чтобы получить id "+7" в input с номером
 var id_avt;     // Для открытия avt
 var id_close_avt;     // Для скрытия avt
+var mob;
 
 //Для галереи фотографий
 var img = 2;            //Начальное изображение
@@ -32,7 +33,7 @@ var max_right_static = max_right//Каждый блок справа +400 px к 
 function show_id(){
     document.getElementById(id_p).style.display = "block";
     document.getElementById(id_p).style.color = id_color;
-    document.getElementById(id_input).style.left = id_left;
+    document.getElementById(id_input).style.paddingLeft = id_left;
     document.getElementById(id_input).style.color = id_color;
 }
 
@@ -42,7 +43,13 @@ function open_type_auto(){
 
     if (rotate == "rotate(0deg)"){
         document.getElementById('triangle').style.transform = "rotate(60deg)";
-        document.getElementById('menu_auto').style.height = "270px";
+
+        if(mob == 0){
+            document.getElementById('menu_auto').style.height = "270px";
+        }else if(mob == 1){
+            document.getElementById('menu_auto').style.height = "630px";
+        }
+
         document.getElementById('hidden_menu_auto').style.display = 'block';
         setTimeout(() => {
             document.getElementById('hidden_menu_auto').style.opacity = '100';
@@ -51,7 +58,12 @@ function open_type_auto(){
         document.getElementById('triangle').style.transform = "rotate(0deg)";
         document.getElementById('hidden_menu_auto').style.display = 'none';
         document.getElementById('hidden_menu_auto').style.opacity = '0';
-        document.getElementById('menu_auto').style.height = "36px";
+        
+        if(mob == 0){
+            document.getElementById('menu_auto').style.height = "36px";
+        }else if(mob == 1){
+            document.getElementById('menu_auto').style.height = "138px";
+        }
     }
 }
 function type(){
@@ -91,8 +103,12 @@ function Open_avt(){
 
     setTimeout(() => {
         if(id_avt == 'the_order_has_been_sent'){
-            Close_avt(id_avt = 'Callback');
-        } 
+            if(mob == 0){
+                Close_avt(id_avt = 'Callback');
+            }else if(mob == 1){
+                Close_avt(id_avt = 'form_call');
+            }
+        }
     }, 0);
 }
 function Close_avt(){
@@ -255,3 +271,18 @@ function scroll_galerey_comments(){
         }
     }
 }
+
+
+
+
+$(function() {
+    if(mob == 1){
+        $(window).scroll(function() {
+            if($(this).scrollTop() > 2500) {
+                $('.slider_call').fadeIn();
+            } else {
+                $('.slider_call').fadeOut();
+            }
+        });
+    }
+});

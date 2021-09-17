@@ -5,17 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style_mob.css">
-    <script src="js/script.js"></script>
-    <title>Kartel Evacuator</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<title>Kartel Evacuator</title>
 </head>
 <body>
+    <script>mob = 1</script>
+    <div class="slider_call"><a href=""></a></div>
+
     <div class="alert" id="Reviews_form">
         <div class="info">
-            <div class="img" onclick="Close_avt(id_avt = 'Reviews_form')"></div>
+            <div class="img_krest" onclick="Close_avt(id_avt = 'Reviews_form')"></div>
             <div class="clearfix"></div>
             <h2>Спасибо, что решили оставить отзыв, это важно для нас</h2>
             <p class="num" id="Reviews_form_p">+7</p>
-            <input type="text" id="Reviews_form_input" placeholder="Оставьте свой телефон" maxlength="10" onclick="show_id(id_p = 'Reviews_form_p' ,id_input = 'Reviews_form_input' ,id_color = '#000' ,id_left = '-17px')">
+            <input type="text" id="Reviews_form_input" placeholder="Оставьте свой телефон" maxlength="10" onclick="show_id(id_p = 'Reviews_form_p' ,id_input = 'Reviews_form_input' ,id_color = '#000' ,document.getElementById('Reviews_form_input').style.paddingLeft = '90px')">
             <input type="text" placeholder="Введите ваше имя">
             <textarea name="" id="textarea" placeholder="Напишите ваш комментарий" ></textarea>
             <button onclick="Close_avt(id_avt = 'Reviews_form')">Отправить отзыв</button>
@@ -25,29 +30,29 @@
 
     <div class="alert" id="the_order_has_been_sent">
         <div class="info">
-            <div class="img" onclick="Close_avt(id_avt = 'the_order_has_been_sent')"></div>
+            <div class="img_krest" onclick="Close_avt(id_avt = 'the_order_has_been_sent')"></div>
             <div class="clearfix"></div>
             <h2>Ваш заказ принят, скоро с вами свяжуться для уточнения вызова</h2>
             <div class="thx">
                 <p>Спасибо, что выбрали Kartel Evacuator</p>
                 <p>Обычно обратный звонок поступает в течении 10 минут.</p>
             </div>
-            <p class="tel">+7(800)123-45-2</p>
+            <a href=""><p class="tel">+7(800)123-45-2</p></a>
             <p>Позвоните если этого не произошло</p>
         </div>
         <div class="closeCallback" onclick="Close_avt(id_avt = 'the_order_has_been_sent')"></div>
     </div>
 
     <div class="alert" id="menu_burger">
-        <div class="img" onclick="Close_avt(id_avt = 'the_order_has_been_sent')"></div>
         <div class="info">
+        <div class="img_krest" onclick="Close_avt(id_avt = 'menu_burger')"></div>
             <ul>
-                <li><a href="/" style="color: #888888">Главная</a></li>
-                <li><a href="#about_us">Почему мы?</a></li>
-                <li><a href="#cost">Стоимость</a></li>
-                <li><a href="#galerey_photo">Галерея</a></li>
-                <li><a href="#Reviews">Отзывы</a></li>
-                <li><a href="#Contacts">Контакты</a></li>
+                <li><a href="#title" onclick="Close_avt(id_avt = 'menu_burger')">Главная</a></li>
+                <li><a href="#about_us" onclick="Close_avt(id_avt = 'menu_burger')">Почему мы?</a></li>
+                <li><a href="#cost" onclick="Close_avt(id_avt = 'menu_burger')">Стоимость</a></li>
+                <li><a href="#galerey_photo" onclick="Close_avt(id_avt = 'menu_burger')">Галерея</a></li>
+                <li><a href="#Reviews" onclick="Close_avt(id_avt = 'menu_burger')">Отзывы</a></li>
+                <li><a href="#Contacts" onclick="Close_avt(id_avt = 'menu_burger')">Контакты</a></li>
             </ul>
         </div>
         <div class="closeCallback" onclick="Close_avt(id_avt = 'menu_burger')"></div>
@@ -55,12 +60,14 @@
 
     <div class="alert" id="form_call">  
         <div class="info">
+            <div class="img_krest" onclick="Close_avt(id_avt = 'form_call')"></div>
+
             <h2>Форма срочного вызова</h2>
             <div class="Field">
                 <p>Номер вашего телефона:</p>
                 <div class="img tel"></div>
                 <p class="number7" id="urgent_form_p">+7</p>
-                <input type="text" id="urgent_form_input" placeholder="(800)123-45-21" maxlength="10" onclick="show_id(id_p = 'urgent_form_p' ,id_input = 'urgent_form_input' ,id_color = '#fff' ,id_left = '66px')">
+                <input type="text" id="urgent_form_input" placeholder="(800)123-45-21" maxlength="10" onclick="show_id(id_p = 'urgent_form_p' ,id_input = 'urgent_form_input' ,id_color = '#000' ,document.getElementById('urgent_form_input').style.paddingLeft = '160px' ,document.getElementById('urgent_form_input').style.paddingRight = '0')">
             </div>
             <div class="Field">
                 <p>Где вы сейчас находитесь:</p>
@@ -95,12 +102,12 @@
                     <label for="steering_wheel_is_locked">Заблокирован руль</label>
                 </div>
             </div>
-            <button onclick="Open_avt(id_avt = 'form_call')">Вызвать эвакуатор</button>
+            <button onclick="Open_avt(id_avt = 'the_order_has_been_sent')">Вызвать эвакуатор</button>
         </div>
         <div class="closeCallback" onclick="Close_avt(id_avt = 'form_call')"></div>
     </div>
 
-    <div class="title">
+    <div class="title" id="title">
         <div class="content">
             <div class="top">
                 <div class="left">
@@ -284,12 +291,19 @@
         <div class="galerey" id="galerey_photo">
             <h2><span class="big_papa">Ф</span>ото галерея</h2>
             <p>Чтобы развеять все ваши сомнения, мы хотим показать вам главный инструмент -  наши эвакуаторы. В зависимости от вашего автомобиля на вызов приедет соответствующий транспорт, мы подберём оптимальный по габаритам и грузоподъёмности эвакуатор.</p>
-            <div class="images">
+            
+            <div class="static_banner"></div>
+            
+            <div class="carousel" data-flickity='{ "cellSelector": "#galerey_img_center", "wrapAround": true, "adaptiveHeight": true, "pageDots": false, "contain": true, "prevNextButtons": false, "wrapAround": true, "imagesLoaded": true  }'>
+                <img id="galerey_img_center" src="img/galerey_images/galerey_images_1.png">
                 <img id="galerey_img_center" src="img/galerey_images/galerey_images_2.png">
-                <img id="galerey_img_center" src="img/galerey_images/galerey_images_2.png">
-                <img id="galerey_img_center" src="img/galerey_images/galerey_images_2.png">
-                <img id="galerey_img_center" src="img/galerey_images/galerey_images_2.png">
+                <img id="galerey_img_center" src="img/galerey_images/galerey_images_3.png">
+                <img id="galerey_img_center" src="img/galerey_images/galerey_images_4.png">
+                <img id="galerey_img_center" src="img/galerey_images/galerey_images_5.png">
+                <img id="galerey_img_center" src="img/galerey_images/galerey_images_6.png">
+                <img id="galerey_img_center" src="img/galerey_images/galerey_images_7.png">
             </div>
+
         </div>
 
         <div class="clearfix"></div>
@@ -298,58 +312,49 @@
             <div class="content">
                 <h2><span class="big_papa">О</span>тзывы</h2>
                 <div class="comments_galerey">
-                    <div class="galerey_comments" id="galerey_comments">
 
-                        <div id="comment_block">
-                            <div class="left">
-                                <div class="img"></div>
-                            </div>
-                            <div class="right">
-                                <p id="comment">“Отличный сервис и сотрудники, порадовал проффесионализм и вежливость.”</p>
-                                <p id="author">-Алексей</p>
+                    <div class="carousel" data-flickity='{ "fullscreen": true, "lazyLoad": 1, "wrapAround": true  }'>
+                        <div class="carousel-cell">
+                            <div id="comment_block">
+                                <div class="left">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="right">
+                                    <p id="comment">“Отличный сервис и сотрудники, порадовал проффесионализм и вежливость.”</p>
+                                    <p id="author">-Алексей</p>
+                                </div>
                             </div>
                         </div>
-    
-                        <div id="comment_block">
-                            <div class="left">
-                                <div class="img"></div>
+                        <div class="carousel-cell">
+                            <div id="comment_block">
+                                <div class="left">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="right">
+                                    <p id="comment">“Приехали и правда точно во время”</p>
+                                    <p id="author">-Максим</p>
+                                </div>
                             </div>
-                            <div class="right">
-                                <p id="comment">“Приехали и правда точно во время”</p>
-                                <p id="author">-Максим</p>
+                        </div>
+                        <div class="carousel-cell">
+                            <div id="comment_block">
+                                <div class="left">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="right">
+                                    <p id="comment">“Всё сделали очень круто и быстро, спасибо”</p>
+                                    <p id="author">-Татьяна</p>
+                                </div>
                             </div>
                         </div>
                         
-                        <div id="comment_block">
-                            <div class="left">
-                                <div class="img"></div>
-                            </div>
-                            <div class="right">
-                                <p id="comment">“Всё сделали очень круто и быстро, спасибо”</p>
-                                <p id="author">-Татьяна</p>
-                            </div>
-                        </div>
-                        
-                        <div id="comment_block">
-                            <div class="left">
-                                <div class="img"></div>
-                            </div>
-                            <div class="right">
-                                <p id="comment">“Приехали и правда точно во время”</p>
-                                <p id="author">-Максим</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="buttons">
-                        <button id="left_arr" onclick="scroll_galerey_comments(perelist = 0)"></button>
-                        <button id="right_arr" onclick="scroll_galerey_comments(perelist = 1)"></button>
                     </div>
                 </div>
-                <div class="width_buttons">
-                    <div class="buttons">
-                        <button onclick="Open_avt(id_avt = 'Reviews_form')">Оставить отзыв</button> 
-                        <button onclick="Open_avt(id_avt = 'Callback')">Вызвать эвакуатор</button>
-                    </div>
+            </div>
+            <div class="width_buttons">
+                <div class="buttons">
+                    <button onclick="Open_avt(id_avt = 'Reviews_form')">Оставить отзыв</button> 
+                    <button onclick="Open_avt(id_avt = 'Callback')">Вызвать эвакуатор</button>
                 </div>
             </div>
         </div>
@@ -387,16 +392,9 @@
                 </div>
             </div>
 
-            <div class="menu">
-                <ul>
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="#about_us">Почему мы?</a></li>
-                    <li><a href="#cost">Стоимость</a></li>
-                    <li><a href="#galerey_photo">Галерея</a></li>
-                    <li><a href="#Reviews">Отзывы</a></li>
-                    <li><a href="#Contacts">Контакты</a></li>
-                </ul>
-            </div>
+            <div class="right"><div class="slider"><a href="#title"></a></div></div>
+
+            <div class="clearfix"></div>
 
             <div class="approve"><p>© ”Картель эвакуатор” 2021</p></div>
 
@@ -416,5 +414,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
