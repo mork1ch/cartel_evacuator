@@ -182,7 +182,7 @@ function galerey(){
                 document.getElementById('left_img_zapolnenye').style.transition = 'none';
                 document.getElementById('left_img_zapolnenye').style.opacity = '0';
                 document.getElementById('left_img_zapolnenye').style.left = '-300px';
-                document.getElementById('left_img_zapolnenye').src = "img/galerey_images/galerey_images_"+galerey_left+".png";
+                document.getElementById('left_img_zapolnenye').src = "img/galerey_images/galerey_images_"+galerey_left+".webp";
             }, 500);
         }, 0);
     }
@@ -208,7 +208,7 @@ function galerey(){
                 document.getElementById('right_img_zapolnenye').style.transition = 'none';
                 document.getElementById('right_img_zapolnenye').style.opacity = '0';
                 document.getElementById('right_img_zapolnenye').style.left = '0';
-                document.getElementById('right_img_zapolnenye').src = "img/galerey_images/galerey_images_"+galerey_right+".png";
+                document.getElementById('right_img_zapolnenye').src = "img/galerey_images/galerey_images_"+galerey_right+".webp";
             }, 500);
         }, 0);
     }
@@ -217,18 +217,18 @@ function galerey(){
     document.getElementById('galerey_right_img_bg').style.backgroundColor = "#fff";
 
     setTimeout(() => {
-        document.getElementById('galerey_img_center').src = "img/galerey_images/galerey_images_"+img+".png";
+        document.getElementById('galerey_img_center').src = "img/galerey_images/galerey_images_"+img+".webp";
     }, 500);
     setTimeout(() => {
 
-        document.getElementById('galerey_left').style.backgroundImage = "url(img/galerey_images/galerey_images_"+galerey_left+".png)";
-        document.getElementById('galerey_right').style.backgroundImage = "url(img/galerey_images/galerey_images_"+galerey_right+".png)";
+        document.getElementById('galerey_left').style.backgroundImage = "url(img/galerey_images/galerey_images_"+galerey_left+".webp)";
+        document.getElementById('galerey_right').style.backgroundImage = "url(img/galerey_images/galerey_images_"+galerey_right+".webp)";
 
         document.getElementById('galerey_left_img_bg').style.backgroundColor = "#ffffff66";
         document.getElementById('galerey_right_img_bg').style.backgroundColor = "#ffffff66"; 
         setTimeout(() => {
-            document.getElementById('left_img_zapolnenye').src = "img/galerey_images/galerey_images_"+galerey_left+".png";
-            document.getElementById('right_img_zapolnenye').src = "img/galerey_images/galerey_images_"+galerey_right+".png";
+            document.getElementById('left_img_zapolnenye').src = "img/galerey_images/galerey_images_"+galerey_left+".webp";
+            document.getElementById('right_img_zapolnenye').src = "img/galerey_images/galerey_images_"+galerey_right+".webp";
         }, 400);
     }, 150);
 }
